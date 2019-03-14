@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+创建并切换分支     git checkout -b feature
+切换分支           git branch feature   +    git checkout feature
+删除本地分支       git branch -d dev
+删除远程分支       git push origin --delete dev
+git push origin develop             # 第一次推送，远端将新建远程分支develop
+git fetch origin develop:develop    # 将远程分支develop拉取到本地的develop分支，如果本地没有将新建
+git push origin master 的意思是 git push origin master:master11 （将本地的 master11 分支推送至远端的 master 分支，如果没有就新建一个）
+立本地分支和远程分支的关联，使用    git branch --set-upstream branch-name origin/branch-name
+git reset --hard HEAD的前几位数字  或者tag的名    git log 查看数字串
+
+git log - 查看提交日志       git diff - 查看代码的更改处
+
+1、git fetch 相当于是从远程获取最新到本地，不会自动merge，如下指令：
+　git fetch orgin master //将远程仓库的master分支下载到本地当前branch中
+　git log -p master  ..origin/master //比较本地的master分支和origin/master分支的差别
+　git merge origin/master //进行合并
+也可以用以下指令：
+git fetch origin master:tmp //从远程仓库master分支获取最新，在本地建立tmp分支
+git diff tmp //將當前分支和tmp進行對比
+git merge tmp //合并tmp分支到当前分支
+
+2. git pull：相当于是从远程获取最新版本并merge到本地
+git pull origin master
+git pull 相当于从远程获取最新版本并merge到本地
+在实际使用中，git fetch更安全一些
+
+
+
+推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上：
+
+$ git push origin master
+如果要推送其他分支，比如dev，就改成：
+
+$ git push origin dev
+但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？
+master分支是主分支，因此要时刻与远程同步；
+dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；
+feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。
+总之，就是在Git中，分支完全可以在本地自己藏着玩，是否推送，视你的心情而定！
+
+
+当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到本地的master分支。不信可以用git branch命令看看：
+$ git branch
+* master
+现在，你的小伙伴要在dev分支上开发，就必须创建远程origin的dev分支到本地，于是他用这个命令创建本地dev分支：
+$ git checkout -b dev origin/dev
+现在，他就可以在dev上继续修改，然后，时不时地把dev分支push到远程：
+
+因此，多人协作的工作模式通常是这样：
+首先，可以试图用git push origin 【branch-name】推送自己的修改；
+    如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+    如果合并有冲突，则解决冲突，并在本地提交；
+    没有冲突或者解决掉冲突后，再用git push origin 【branch-name】推送就能成功！
+    如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to 【branch-name】 origin/【branch-name】。
+这就是多人协作的工作模式，一旦熟悉了，就非常简单。
+
+git clone -b feature http://123.56.28.235:3000/xiejc56/test.git    克隆远程指定分支
+</body>
+</html>

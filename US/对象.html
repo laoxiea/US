@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //工厂模式
+    var n=new Object()
+    var nn={}
+    n.name='tom'
+    nn.name='tom'
+    console.log(n)
+    console.log(nn)
+    function planeFactory(data) {
+        //原料
+//        var plane=new Object()
+        let plane={}
+        //加工
+        plane.name=data.name
+        plane.size=data.size
+        plane.HP=100
+        plane.shoot=function () {
+            console.log(this.name+'得分:'+this.size*10)
+        }
+        //出厂
+        return plane
+    }
+    let big=planeFactory({name:'tom',size:3})
+    let small=planeFactory({name:'lucy',size:1})
+    big.shoot()
+    small.shoot()
+</script>
+</body>
+</html>

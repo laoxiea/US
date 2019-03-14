@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="d1">hahah</div>
+<script src="../js/zepto.js"></script>
+<script>
+    $('#d1').bind('zidingyi',function (event,a,b) {
+        console.log('我是你爸'+a+b)
+    })
+    $('#d1').on('click',function () {
+        $('#d1').trigger('zidingyi',[' 儿砸',' 儿子'])
+    })//.toggle()
+</script>
+</body>
+</html>

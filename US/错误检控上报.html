@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://baidu1.com/test.js" charset="UTF-8"></script>
+</head>
+<body>
+<script>
+    window.addEventListener('error',function (e) {
+        console.log('捕获',e)
+    },true);//true是捕获，false是冒泡
+</script>
+<script>
+    (new Image()).src='http://super.wo.cn/oss' //错误上报
+
+</script>
+</body>
+</html>

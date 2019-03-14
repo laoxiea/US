@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="form1">
+    <input type="text" name="pip" value="11">
+</form>
+<form name="myform">
+    <input type="text" name="name1" id="nn" />
+    <input type="button" name="button" value="获取" onclick="print()" />
+</form>
+<script>
+    function print(){
+        var a=myform.name1.value;
+        alert(a);
+    }
+    console.log(form1.pip.value)
+    /*
+     * 百度
+     * */
+//    setTimeout(function () {
+//        document.getElementById('kw').value = '我爱你';
+//        document.getElementsByClassName('s_btn')[0].click();
+//        setTimeout(function () {
+//            document.getElementById('kw').value = '我恨你';
+//            document.getElementsByClassName('s_btn')[0].click();
+//        }, 2000)
+//    }, 2000);
+</script>
+</body>
+</html>

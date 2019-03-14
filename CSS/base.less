@@ -1,0 +1,23 @@
+@base:#7EEAF0;@w:200px;@h:@w*1.2;
+.font{
+  font-size: 40px;
+  font-weight: bold;
+}
+.border(@a,@b,@c){
+  border:@a @b @c*2;
+}
+.box{
+  color:lighten(@base,50%);
+  width:@w*1.5;
+  height:200px;
+  background: lighten(@base,20%);
+  .border(3px,solid,#e4393c)
+}
+.pageBox{
+  .font;//混入
+  background: saturate(@base, 15%);
+  color:darken(@base,20%);
+  width:@w;
+  height:@h*1.2;
+  .border(6px,dotted,#DBFADE/3)
+}

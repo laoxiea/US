@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-size: 20px;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+        }
+        div{
+            width:48%;
+            background: #effff4;
+            border:3px solid transparent;
+        }
+        section{
+            width:48%;
+        }
+        .active1 {
+            background: #bafff8;
+        }
+        .active2 {
+            background: #ff9e50;
+        }
+        .active3 {
+            background: #8691ff;
+        }
+        .active4 {
+            background: #cf48ff;
+        }
+        .active5 {
+            background: #ff29a5;
+        }
+        .color{
+            /*color: #3df3ff;*/
+            color:transparent;
+            font-weight: bold;
+            -webkit-text-stroke:1px black;
+        }
+        button{
+            border:none
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div>
+        <p>11</p>
+        <p>22</p>
+        <p>33</p>
+        <p>44</p>
+        <p>55</p>
+    </div>
+    <section></section>
+</header>
+<button style="background: #1EF;">蓝色</button>
+<button style="background: #FFBCB1;">粉色</button>
+<br>
+<button>设置</button>
+<button>克隆</button>
+<br>
+<input type="text">输入值
+<textarea id="" cols="30" rows="3"></textarea>
+<script src="../js/jquery.min.js"></script>
+<script>
+    $('p').click(function (e) {
+        $(e.target).toggleClass(
+            function () {
+                switch($(e.target).index()+1){
+                    case 1:return 'active1';
+                        break;
+                    case 2:return 'active2';
+                        break;
+                    case 3:return 'active3';
+                        break;
+                    case 4:return 'active4';
+                        break;
+                    case 5:return 'active5';
+                        break;
+                }
+            }
+        );
+
+
+    });
+    let count=0;
+    $('div').click(function () {
+        count++;
+        $(this).toggleClass('color', count % 2 === 0).toggle(function () {
+                $(this).addClass("selected");
+            },
+            function () {
+                $(this).removeClass("selected");
+            }
+        );
+    });
+    var wtcolor='';
+    $('button:contains("蓝色")').click(function () {
+        wtcolor=1
+    });
+    $('button:contains("粉色")').click(function () {
+        wtcolor=2
+    });
+    $('button:contains("设置")').click(function () {
+        if (wtcolor===1){
+            $('div').css({
+                "background":"#1EF",
+                "border":"3px solid #FF8855"
+            })
+        }else if (wtcolor===2){
+            $('div').css({
+                "background":"#ffbcb1",
+                "border":"3px solid #2A9FFF"
+            })
+        }
+    })
+    $("input").bind("input propertychange", function () {
+        var val=$("input").val();
+        $('textarea').html(val);
+    })
+    $(function () {
+        var cloneOne=null;
+        $('p').click(function (e) {
+            cloneOne=$(e.target).clone(true);//true复制事件
+            $('button:contains("克隆")').click(function () {
+                $('section').append(cloneOne)
+            })
+        })
+    })
+</script>
+</body>
+</html>

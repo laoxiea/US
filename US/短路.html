@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a='',b=null,c='c';
+    let aa=a&&b&&c//遇真跳过，遇null 空 undefined 直接输出
+    let bb=a||b||c
+    console.log(aa)//遇假 null 空 undefined跳过
+    console.log(bb)
+    let arr=[
+        {
+            "title": "国内语音拨打分钟数",
+            "detail": "100分钟"
+        },{
+            "title": "国内流量",
+            "detail": "500MB"
+        },{
+            "title": "接听免费",
+            "detail": "国内"
+        }
+    ]
+    console.log(arr[0].title)
+    console.log(arr[0]['title'])
+</script>
+</body>
+</html>

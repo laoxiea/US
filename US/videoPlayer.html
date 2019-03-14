@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            text-align: center;
+        }
+		#video{
+		width:1100px;
+		height:600px;
+		}
+    </style>
+</head>
+<body>
+<!--<video autoplay src="岛.mp4"></video>-->
+<video id="video" src="" autoplay controls preload="metadata" onkeypress="pauseOrPlay(e)">
+    <!--<source />-->
+    <!--浏览器不支持video播放-->
+</video>
+<button id="jiasu">加速</button>
+<span id="rate"></span>
+<button id="jiansu">减速</button>
+<input type="file" id="file_input" webkitdirectory directory/>
+<!--<p>Files:</p>-->
+<!--<pre id="files"></pre>-->
+<select name="" id="select" onchange="getName(this.options[this.options.selectedIndex])">
+    <option></option>
+</select>
+<script>
+    video.volume=1;
+    video.playbackRate=1.6;
+    rate.innerHTML=video.playbackRate
+	jiasu.onclick=function () {
+        video.playbackRate+=0.2
+        rate.innerHTML=video.playbackRate
+    }
+    jiansu.onclick=function () {
+        video.playbackRate-=0.2
+        rate.innerHTML=video.playbackRate
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        var fileControl = document.querySelector('#file_input');
+        var filesDiv = document.querySelector('#files');
+
+        fileControl.addEventListener('change', function(event) {
+            var files = event.target.files;
+            var fileList = [];
+            for (var i = 0, len = files.length; i < len; i++) {
+                fileList.push(files[i].name);
+                select.innerHTML+=`<option>${files[i].name}</option> `
+            }
+//            filesDiv.innerHTML = fileList.join('\n');
+            //debugger;
+        });
+    });
+    function getName(e){
+        console.log(e.value)
+        video.src=e.value
+        video.playbackRate=1.6;
+    }
+    document.addEventListener('keypress', function(e) {
+        if(e.keyCode===32){
+            console.log(video.paused)
+            if (video.paused){
+                video.play()
+            }else{
+                video.pause()
+            }
+        }
+    })
+    function pauseOrPlay(e) {
+        console.log(e)
+//        video.pause()
+    }
+</script>
+</body>
+</html>

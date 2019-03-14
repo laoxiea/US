@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    try {
+        class Person {
+            name
+
+            eat() {
+                console.log(this.name + ' eating')
+            }
+        }
+
+        let lili = new Person()
+        lili.name = 'lili'
+        lili.eat()
+    } catch (e) {
+        console.log(e)
+    }
+</script>
+<script>
+    function aa(x,y,z=3) {
+        console.log(x+'\n'+y)
+    }
+    aa(1,2)
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Base() {
+        this.name='name'
+        this.age=18
+    }
+    Base.prototype={
+        say() {
+            alert('hi')
+        },
+        bibi(){
+            alert('bibi')
+        },
+        ex:'lucy'
+    }
+    function Student() {
+//        Base.call(this,arguments)///////////
+        this.add='US'
+    }
+    Student.prototype=new Base()///////////继承原型的方法和属性
+    Student.prototype.shout=function () {
+        alert('gun')
+    }
+    Student.prototype.init =function () {
+        this.say()
+        this.bibi()
+        this.shout()
+    }
+    let tom=new Student()
+    tom.say()
+    tom.shout()
+//    tom.init()
+    console.log(tom.name)
+    console.log(tom.age)
+    console.log(tom.add)
+    console.log(tom.ex)
+</script>
+</body>
+</html>

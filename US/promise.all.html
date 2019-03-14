@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let req1 = new Promise((resolve, reject) => {
+        fetch('http://127.0.0.1/jsonp-test/data/dish_getbypage.php?start=1'
+        ).then((response) =>
+            response.json()
+        ).then((res) => {
+            resolve(res[0].name)
+            console.log(res[0].name);
+            //return res[0].name //此处返不回去
+        })
+    })
+    let req2 = new Promise((resolve, reject) => {
+        fetch('http://127.0.0.1/jsonp-test/data/dish_getbypage.php?start=2'
+        ).then((response) =>
+            response.json()
+        ).then((res) => {
+            resolve(res[0].name)
+            console.log(res[0].name);
+            //return res[0].name //此处返不回去
+        }).catch(e =>
+            console.log(e)
+        )
+    });
+
+    Promise.all([req1, req2]).then(
+        (data) => {
+            console.log(data)
+        }
+    )
+
+    function aa() {
+        console.log('aa')
+    }
+    (async function () {
+        await aa()
+        return 'done'
+    })().then(
+        v => console.log(v)
+    )
+    console.log(
+        (async function () {
+        })()       //Promise {<resolved>: undefined}
+            .then()//Promise {<pending>}
+    )
+
+
+    //        let pr_task = [];
+    //        pr_task.push(fetch('http://127.0.0.1/jsonp-test/data/dish_getbypage.php?start=1')
+    //            .then((response) =>
+    //                response.json()
+    //            ).then((res) => {
+    //                console.log(res[0].name);
+    //                return res[0].name//此处可以返回
+    //            }))
+    //        pr_task.push(fetch('http://127.0.0.1/jsonp-test/data/dish_getbypage.php?start=2')
+    //            .then((response) =>
+    //                response.json()
+    //            ).then((res) => {
+    //                console.log(res[0].name);
+    //                return res[0].name//此处可以返回
+    //            }).catch((e) =>
+    //                console.log(e)
+    //            )
+    //        )
+    //
+    //        Promise.all(pr_task).then(function (data) {
+    //            console.log(data)
+    //            //Here,code  After All Promise
+    //        })
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [
+        {name: 'tom1', isSelect: true, id: 1},
+        {name: 'tom2', isSelect: true},
+        {name: 'tom3', isSelect: false},
+        {name: 'tom4', isSelect: false, id: 1},
+        {name: 'tom5', isSelect: true, id: 1},
+        {name: 'tom6', isSelect: false, id: 1},
+        {name: 'tom7', isSelect: true, id: 1}
+    ]
+    let result = arr.filter((item) => {
+        return item.id != null && item.isSelect === true && item.name==='tom5'
+    })
+    console.log(result)
+</script>
+</body>
+</html>

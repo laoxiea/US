@@ -1,0 +1,1754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <product operType="0" productCode="99130054">
+  
+    <productName>5元1GB省内流量日包-后付费</productName>
+  
+    <productExplain>[产品描述]新增  </productExplain>
+  
+    <productLine>
+    
+      <productLineCode>P01</productLineCode>
+    
+      <productLineName>语音通信</productLineName>
+  
+    </productLine>
+  
+    <productSeries>
+    
+      <seriesCode>P0103</seriesCode>
+    
+      <seriesName>移动电话</seriesName>
+  
+    </productSeries>
+  
+    <productCategory>
+    
+      <categoryCode>P010303</categoryCode>
+    
+      <categoryName>WCDMA电话</categoryName>
+  
+    </productCategory>
+  
+    <productMode>01</productMode>
+  
+    <serviceId>0</serviceId>
+  
+    <brandCode>G005</brandCode>
+  
+    <isGroup>0</isGroup>
+  
+    <prepayTag>0</prepayTag>
+  
+    <compTag>0</compTag>
+  
+    <startDate>2018-01-12 00:00:00</startDate>
+  
+    <endDate>2037-12-31 23:59:59</endDate>
+  
+    <createDate>2018-01-12 16:23:30</createDate>
+  
+    <version>1.0</version>
+  
+    <productState>4</productState>
+  
+    <manageAreaCode>000001</manageAreaCode>
+  
+    <productNetType>1</productNetType>
+  
+    <saleDir>10006328</saleDir>
+  
+    <pmServiceTypeCodes>
+    
+      <serviceTypeCode>1303</serviceTypeCode>
+  
+    </pmServiceTypeCodes>
+  
+    <productPackages>
+    
+      <productPackage>
+      
+        <forceTag>1</forceTag>
+      
+        <defaultTag>1</defaultTag>
+      
+        <minNumber>-1</minNumber>
+      
+        <maxNumber>-1</maxNumber>
+      
+        <startDate>2018-01-12 00:00:00</startDate>
+      
+        <endDate>2037-12-31 23:59:59</endDate>
+      
+        <pmPackage>
+        
+          <packageId>2000037346</packageId>
+        
+          <packageName>[产品构成][主资费信息构成]</packageName>
+        
+          <packageTypeCode>2</packageTypeCode>
+        
+          <minNumber>-1</minNumber>
+        
+          <maxNumber>-1</maxNumber>
+        
+          <startDate>2018-01-12 00:00:00</startDate>
+        
+          <endDate>2037-12-31 23:59:59</endDate>
+        
+          <packageElements>
+          
+            <packageElement>
+            
+              <elementTypeCode>D</elementTypeCode>
+            
+              <defaultTag>1</defaultTag>
+            
+              <startDate>2018-01-12 00:00:00</startDate>
+            
+              <endDate>2037-12-31 23:59:59</endDate>
+            
+              <price>
+              
+                <priceId>53284</priceId>
+              
+                <priceType>0</priceType>
+              
+                <priceName>[构成2000037346]对应资费</priceName>
+              
+                <otherPrices>
+                
+                  <otherPrice>
+                  
+                    <priceOther>
+                    
+                      <content>5元1GB省内流量日包。其他业务规定详见发文。</content>
+                  
+                    </priceOther>
+                
+                  </otherPrice>
+              
+                </otherPrices>
+            
+              </price>
+          
+            </packageElement>
+        
+          </packageElements>
+      
+        </pmPackage>
+    
+      </productPackage>
+  
+    </productPackages>
+  
+    <productSaleAreas>
+    
+      <productSaleArea>
+      
+        <saleAreaType>00</saleAreaType>
+      
+        <saleAreaCode>00</saleAreaCode>
+    
+      </productSaleArea>
+  
+    </productSaleAreas>
+  
+    <productCustGroups>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>0</objectCustId>
+    
+      </productCustGroup>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>1</objectCustId>
+    
+      </productCustGroup>
+  
+    </productCustGroups>
+
+  </product>
+  <product operType="0" productCode="99130055">
+  
+    <productName>5元1GB省内流量日包-预付费</productName>
+  
+    <productExplain>[产品描述]新增  </productExplain>
+  
+    <productLine>
+    
+      <productLineCode>P01</productLineCode>
+    
+      <productLineName>语音通信</productLineName>
+  
+    </productLine>
+  
+    <productSeries>
+    
+      <seriesCode>P0103</seriesCode>
+    
+      <seriesName>移动电话</seriesName>
+  
+    </productSeries>
+  
+    <productCategory>
+    
+      <categoryCode>P010303</categoryCode>
+    
+      <categoryName>WCDMA电话</categoryName>
+  
+    </productCategory>
+  
+    <productMode>01</productMode>
+  
+    <serviceId>0</serviceId>
+  
+    <brandCode>G005</brandCode>
+  
+    <isGroup>0</isGroup>
+  
+    <prepayTag>2</prepayTag>
+  
+    <compTag>0</compTag>
+  
+    <startDate>2018-01-12 00:00:00</startDate>
+  
+    <endDate>2037-12-31 23:59:59</endDate>
+  
+    <createDate>2018-01-12 16:23:30</createDate>
+  
+    <version>1.0</version>
+  
+    <productState>4</productState>
+  
+    <manageAreaCode>000001</manageAreaCode>
+  
+    <productNetType>1</productNetType>
+  
+    <saleDir>10006328</saleDir>
+  
+    <pmServiceTypeCodes>
+    
+      <serviceTypeCode>1303</serviceTypeCode>
+  
+    </pmServiceTypeCodes>
+  
+    <productPackages>
+    
+      <productPackage>
+      
+        <forceTag>1</forceTag>
+      
+        <defaultTag>1</defaultTag>
+      
+        <minNumber>-1</minNumber>
+      
+        <maxNumber>-1</maxNumber>
+      
+        <startDate>2018-01-12 00:00:00</startDate>
+      
+        <endDate>2037-12-31 23:59:59</endDate>
+      
+        <pmPackage>
+        
+          <packageId>2000037347</packageId>
+        
+          <packageName>[产品构成][主资费信息构成]</packageName>
+        
+          <packageTypeCode>2</packageTypeCode>
+        
+          <minNumber>-1</minNumber>
+        
+          <maxNumber>-1</maxNumber>
+        
+          <startDate>2018-01-12 00:00:00</startDate>
+        
+          <endDate>2037-12-31 23:59:59</endDate>
+        
+          <packageElements>
+          
+            <packageElement>
+            
+              <elementTypeCode>D</elementTypeCode>
+            
+              <defaultTag>1</defaultTag>
+            
+              <startDate>2018-01-12 00:00:00</startDate>
+            
+              <endDate>2037-12-31 23:59:59</endDate>
+            
+              <price>
+              
+                <priceId>53286</priceId>
+              
+                <priceType>0</priceType>
+              
+                <priceName>[构成2000037347]对应资费</priceName>
+              
+                <otherPrices>
+                
+                  <otherPrice>
+                  
+                    <priceOther>
+                    
+                      <content>5元1GB省内流量日包。其他业务规定详见发文。</content>
+                  
+                    </priceOther>
+                
+                  </otherPrice>
+              
+                </otherPrices>
+            
+              </price>
+          
+            </packageElement>
+        
+          </packageElements>
+      
+        </pmPackage>
+    
+      </productPackage>
+  
+    </productPackages>
+  
+    <productSaleAreas>
+    
+      <productSaleArea>
+      
+        <saleAreaType>00</saleAreaType>
+      
+        <saleAreaCode>00</saleAreaCode>
+    
+      </productSaleArea>
+  
+    </productSaleAreas>
+  
+    <productCustGroups>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>0</objectCustId>
+    
+      </productCustGroup>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>1</objectCustId>
+    
+      </productCustGroup>
+  
+    </productCustGroups>
+
+  </product>
+  <product operType="0" productCode="99130056">
+  
+    <productName>20元500MB省内流量月包-后付费</productName>
+  
+    <productExplain>[产品描述]新增  </productExplain>
+  
+    <productLine>
+    
+      <productLineCode>P01</productLineCode>
+    
+      <productLineName>语音通信</productLineName>
+  
+    </productLine>
+  
+    <productSeries>
+    
+      <seriesCode>P0103</seriesCode>
+    
+      <seriesName>移动电话</seriesName>
+  
+    </productSeries>
+  
+    <productCategory>
+    
+      <categoryCode>P010303</categoryCode>
+    
+      <categoryName>WCDMA电话</categoryName>
+  
+    </productCategory>
+  
+    <productMode>01</productMode>
+  
+    <serviceId>0</serviceId>
+  
+    <brandCode>G005</brandCode>
+  
+    <isGroup>0</isGroup>
+  
+    <prepayTag>0</prepayTag>
+  
+    <compTag>0</compTag>
+  
+    <startDate>2018-01-12 00:00:00</startDate>
+  
+    <endDate>2037-12-31 23:59:59</endDate>
+  
+    <createDate>2018-01-12 16:23:30</createDate>
+  
+    <version>1.0</version>
+  
+    <productState>4</productState>
+  
+    <manageAreaCode>000001</manageAreaCode>
+  
+    <productNetType>1</productNetType>
+  
+    <saleDir>10006328</saleDir>
+  
+    <pmServiceTypeCodes>
+    
+      <serviceTypeCode>1303</serviceTypeCode>
+  
+    </pmServiceTypeCodes>
+  
+    <productPackages>
+    
+      <productPackage>
+      
+        <forceTag>1</forceTag>
+      
+        <defaultTag>1</defaultTag>
+      
+        <minNumber>-1</minNumber>
+      
+        <maxNumber>-1</maxNumber>
+      
+        <startDate>2018-01-12 00:00:00</startDate>
+      
+        <endDate>2037-12-31 23:59:59</endDate>
+      
+        <pmPackage>
+        
+          <packageId>2000037348</packageId>
+        
+          <packageName>[产品构成][主资费信息构成]</packageName>
+        
+          <packageTypeCode>2</packageTypeCode>
+        
+          <minNumber>-1</minNumber>
+        
+          <maxNumber>-1</maxNumber>
+        
+          <startDate>2018-01-12 00:00:00</startDate>
+        
+          <endDate>2037-12-31 23:59:59</endDate>
+        
+          <packageElements>
+          
+            <packageElement>
+            
+              <elementTypeCode>D</elementTypeCode>
+            
+              <defaultTag>1</defaultTag>
+            
+              <startDate>2018-01-12 00:00:00</startDate>
+            
+              <endDate>2037-12-31 23:59:59</endDate>
+            
+              <price>
+              
+                <priceId>53288</priceId>
+              
+                <priceType>0</priceType>
+              
+                <priceName>[构成2000037348]对应资费</priceName>
+              
+                <otherPrices>
+                
+                  <otherPrice>
+                  
+                    <priceOther>
+                    
+                      <content>20元500MB省内流量月包。其他业务规定详见发文。</content>
+                  
+                    </priceOther>
+                
+                  </otherPrice>
+              
+                </otherPrices>
+            
+              </price>
+          
+            </packageElement>
+        
+          </packageElements>
+      
+        </pmPackage>
+    
+      </productPackage>
+  
+    </productPackages>
+  
+    <productSaleAreas>
+    
+      <productSaleArea>
+      
+        <saleAreaType>00</saleAreaType>
+      
+        <saleAreaCode>00</saleAreaCode>
+    
+      </productSaleArea>
+  
+    </productSaleAreas>
+  
+    <productCustGroups>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>0</objectCustId>
+    
+      </productCustGroup>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>1</objectCustId>
+    
+      </productCustGroup>
+  
+    </productCustGroups>
+
+  </product>
+  <product operType="0" productCode="99130057">
+  
+    <productName>20元500MB省内流量月包-预付费</productName>
+  
+    <productExplain>[产品描述]新增  </productExplain>
+  
+    <productLine>
+    
+      <productLineCode>P01</productLineCode>
+    
+      <productLineName>语音通信</productLineName>
+  
+    </productLine>
+  
+    <productSeries>
+    
+      <seriesCode>P0103</seriesCode>
+    
+      <seriesName>移动电话</seriesName>
+  
+    </productSeries>
+  
+    <productCategory>
+    
+      <categoryCode>P010303</categoryCode>
+    
+      <categoryName>WCDMA电话</categoryName>
+  
+    </productCategory>
+  
+    <productMode>01</productMode>
+  
+    <serviceId>0</serviceId>
+  
+    <brandCode>G005</brandCode>
+  
+    <isGroup>0</isGroup>
+  
+    <prepayTag>2</prepayTag>
+  
+    <compTag>0</compTag>
+  
+    <startDate>2018-01-12 00:00:00</startDate>
+  
+    <endDate>2037-12-31 23:59:59</endDate>
+  
+    <createDate>2018-01-12 16:23:30</createDate>
+  
+    <version>1.0</version>
+  
+    <productState>4</productState>
+  
+    <manageAreaCode>000001</manageAreaCode>
+  
+    <productNetType>1</productNetType>
+  
+    <saleDir>10006328</saleDir>
+  
+    <pmServiceTypeCodes>
+    
+      <serviceTypeCode>1303</serviceTypeCode>
+  
+    </pmServiceTypeCodes>
+  
+    <productPackages>
+    
+      <productPackage>
+      
+        <forceTag>1</forceTag>
+      
+        <defaultTag>1</defaultTag>
+      
+        <minNumber>-1</minNumber>
+      
+        <maxNumber>-1</maxNumber>
+      
+        <startDate>2018-01-12 00:00:00</startDate>
+      
+        <endDate>2037-12-31 23:59:59</endDate>
+      
+        <pmPackage>
+        
+          <packageId>2000037349</packageId>
+        
+          <packageName>[产品构成][主资费信息构成]</packageName>
+        
+          <packageTypeCode>2</packageTypeCode>
+        
+          <minNumber>-1</minNumber>
+        
+          <maxNumber>-1</maxNumber>
+        
+          <startDate>2018-01-12 00:00:00</startDate>
+        
+          <endDate>2037-12-31 23:59:59</endDate>
+        
+          <packageElements>
+          
+            <packageElement>
+            
+              <elementTypeCode>D</elementTypeCode>
+            
+              <defaultTag>1</defaultTag>
+            
+              <startDate>2018-01-12 00:00:00</startDate>
+            
+              <endDate>2037-12-31 23:59:59</endDate>
+            
+              <price>
+              
+                <priceId>53290</priceId>
+              
+                <priceType>0</priceType>
+              
+                <priceName>[构成2000037349]对应资费</priceName>
+              
+                <otherPrices>
+                
+                  <otherPrice>
+                  
+                    <priceOther>
+                    
+                      <content>20元500MB省内流量月包。其他业务规定详见发文。</content>
+                  
+                    </priceOther>
+                
+                  </otherPrice>
+              
+                </otherPrices>
+            
+              </price>
+          
+            </packageElement>
+        
+          </packageElements>
+      
+        </pmPackage>
+    
+      </productPackage>
+  
+    </productPackages>
+  
+    <productSaleAreas>
+    
+      <productSaleArea>
+      
+        <saleAreaType>00</saleAreaType>
+      
+        <saleAreaCode>00</saleAreaCode>
+    
+      </productSaleArea>
+  
+    </productSaleAreas>
+  
+    <productCustGroups>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>0</objectCustId>
+    
+      </productCustGroup>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>1</objectCustId>
+    
+      </productCustGroup>
+  
+    </productCustGroups>
+
+  </product>
+  <product operType="0" productCode="99130058">
+  
+    <productName>30元1GB省内流量月包-后付费</productName>
+  
+    <productExplain>[产品描述]新增  </productExplain>
+  
+    <productLine>
+    
+      <productLineCode>P01</productLineCode>
+    
+      <productLineName>语音通信</productLineName>
+  
+    </productLine>
+  
+    <productSeries>
+    
+      <seriesCode>P0103</seriesCode>
+    
+      <seriesName>移动电话</seriesName>
+  
+    </productSeries>
+  
+    <productCategory>
+    
+      <categoryCode>P010303</categoryCode>
+    
+      <categoryName>WCDMA电话</categoryName>
+  
+    </productCategory>
+  
+    <productMode>01</productMode>
+  
+    <serviceId>0</serviceId>
+  
+    <brandCode>G005</brandCode>
+  
+    <isGroup>0</isGroup>
+  
+    <prepayTag>0</prepayTag>
+  
+    <compTag>0</compTag>
+  
+    <startDate>2018-01-12 00:00:00</startDate>
+  
+    <endDate>2037-12-31 23:59:59</endDate>
+  
+    <createDate>2018-01-12 16:23:30</createDate>
+  
+    <version>1.0</version>
+  
+    <productState>4</productState>
+  
+    <manageAreaCode>000001</manageAreaCode>
+  
+    <productNetType>1</productNetType>
+  
+    <saleDir>10006328</saleDir>
+  
+    <pmServiceTypeCodes>
+    
+      <serviceTypeCode>1303</serviceTypeCode>
+  
+    </pmServiceTypeCodes>
+  
+    <productPackages>
+    
+      <productPackage>
+      
+        <forceTag>1</forceTag>
+      
+        <defaultTag>1</defaultTag>
+      
+        <minNumber>-1</minNumber>
+      
+        <maxNumber>-1</maxNumber>
+      
+        <startDate>2018-01-12 00:00:00</startDate>
+      
+        <endDate>2037-12-31 23:59:59</endDate>
+      
+        <pmPackage>
+        
+          <packageId>2000037350</packageId>
+        
+          <packageName>[产品构成][主资费信息构成]</packageName>
+        
+          <packageTypeCode>2</packageTypeCode>
+        
+          <minNumber>-1</minNumber>
+        
+          <maxNumber>-1</maxNumber>
+        
+          <startDate>2018-01-12 00:00:00</startDate>
+        
+          <endDate>2037-12-31 23:59:59</endDate>
+        
+          <packageElements>
+          
+            <packageElement>
+            
+              <elementTypeCode>D</elementTypeCode>
+            
+              <defaultTag>1</defaultTag>
+            
+              <startDate>2018-01-12 00:00:00</startDate>
+            
+              <endDate>2037-12-31 23:59:59</endDate>
+            
+              <price>
+              
+                <priceId>53292</priceId>
+              
+                <priceType>0</priceType>
+              
+                <priceName>[构成2000037350]对应资费</priceName>
+              
+                <otherPrices>
+                
+                  <otherPrice>
+                  
+                    <priceOther>
+                    
+                      <content>30元1GB省内流量月包。其他业务规定详见发文。</content>
+                  
+                    </priceOther>
+                
+                  </otherPrice>
+              
+                </otherPrices>
+            
+              </price>
+          
+            </packageElement>
+        
+          </packageElements>
+      
+        </pmPackage>
+    
+      </productPackage>
+  
+    </productPackages>
+  
+    <productSaleAreas>
+    
+      <productSaleArea>
+      
+        <saleAreaType>00</saleAreaType>
+      
+        <saleAreaCode>00</saleAreaCode>
+    
+      </productSaleArea>
+  
+    </productSaleAreas>
+  
+    <productCustGroups>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>0</objectCustId>
+    
+      </productCustGroup>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>1</objectCustId>
+    
+      </productCustGroup>
+  
+    </productCustGroups>
+
+  </product>
+  <product operType="0" productCode="99130059">
+  
+    <productName>30元1GB省内流量月包-预付费</productName>
+  
+    <productExplain>[产品描述]新增  </productExplain>
+  
+    <productLine>
+    
+      <productLineCode>P01</productLineCode>
+    
+      <productLineName>语音通信</productLineName>
+  
+    </productLine>
+  
+    <productSeries>
+    
+      <seriesCode>P0103</seriesCode>
+    
+      <seriesName>移动电话</seriesName>
+  
+    </productSeries>
+  
+    <productCategory>
+    
+      <categoryCode>P010303</categoryCode>
+    
+      <categoryName>WCDMA电话</categoryName>
+  
+    </productCategory>
+  
+    <productMode>01</productMode>
+  
+    <serviceId>0</serviceId>
+  
+    <brandCode>G005</brandCode>
+  
+    <isGroup>0</isGroup>
+  
+    <prepayTag>2</prepayTag>
+  
+    <compTag>0</compTag>
+  
+    <startDate>2018-01-12 00:00:00</startDate>
+  
+    <endDate>2037-12-31 23:59:59</endDate>
+  
+    <createDate>2018-01-12 16:23:30</createDate>
+  
+    <version>1.0</version>
+  
+    <productState>4</productState>
+  
+    <manageAreaCode>000001</manageAreaCode>
+  
+    <productNetType>1</productNetType>
+  
+    <saleDir>10006328</saleDir>
+  
+    <pmServiceTypeCodes>
+    
+      <serviceTypeCode>1303</serviceTypeCode>
+  
+    </pmServiceTypeCodes>
+  
+    <productPackages>
+    
+      <productPackage>
+      
+        <forceTag>1</forceTag>
+      
+        <defaultTag>1</defaultTag>
+      
+        <minNumber>-1</minNumber>
+      
+        <maxNumber>-1</maxNumber>
+      
+        <startDate>2018-01-12 00:00:00</startDate>
+      
+        <endDate>2037-12-31 23:59:59</endDate>
+      
+        <pmPackage>
+        
+          <packageId>2000037351</packageId>
+        
+          <packageName>[产品构成][主资费信息构成]</packageName>
+        
+          <packageTypeCode>2</packageTypeCode>
+        
+          <minNumber>-1</minNumber>
+        
+          <maxNumber>-1</maxNumber>
+        
+          <startDate>2018-01-12 00:00:00</startDate>
+        
+          <endDate>2037-12-31 23:59:59</endDate>
+        
+          <packageElements>
+          
+            <packageElement>
+            
+              <elementTypeCode>D</elementTypeCode>
+            
+              <defaultTag>1</defaultTag>
+            
+              <startDate>2018-01-12 00:00:00</startDate>
+            
+              <endDate>2037-12-31 23:59:59</endDate>
+            
+              <price>
+              
+                <priceId>53294</priceId>
+              
+                <priceType>0</priceType>
+              
+                <priceName>[构成2000037351]对应资费</priceName>
+              
+                <otherPrices>
+                
+                  <otherPrice>
+                  
+                    <priceOther>
+                    
+                      <content>30元1GB省内流量月包。其他业务规定详见发文。</content>
+                  
+                    </priceOther>
+                
+                  </otherPrice>
+              
+                </otherPrices>
+            
+              </price>
+          
+            </packageElement>
+        
+          </packageElements>
+      
+        </pmPackage>
+    
+      </productPackage>
+  
+    </productPackages>
+  
+    <productSaleAreas>
+    
+      <productSaleArea>
+      
+        <saleAreaType>00</saleAreaType>
+      
+        <saleAreaCode>00</saleAreaCode>
+    
+      </productSaleArea>
+  
+    </productSaleAreas>
+  
+    <productCustGroups>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>0</objectCustId>
+    
+      </productCustGroup>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>1</objectCustId>
+    
+      </productCustGroup>
+  
+    </productCustGroups>
+
+  </product>
+  <product operType="0" productCode="99130060">
+  
+    <productName>30元500MB全国流量月包-后付费</productName>
+  
+    <productExplain>[产品描述]新增  </productExplain>
+  
+    <productLine>
+    
+      <productLineCode>P01</productLineCode>
+    
+      <productLineName>语音通信</productLineName>
+  
+    </productLine>
+  
+    <productSeries>
+    
+      <seriesCode>P0103</seriesCode>
+    
+      <seriesName>移动电话</seriesName>
+  
+    </productSeries>
+  
+    <productCategory>
+    
+      <categoryCode>P010303</categoryCode>
+    
+      <categoryName>WCDMA电话</categoryName>
+  
+    </productCategory>
+  
+    <productMode>01</productMode>
+  
+    <serviceId>0</serviceId>
+  
+    <brandCode>G005</brandCode>
+  
+    <isGroup>0</isGroup>
+  
+    <prepayTag>0</prepayTag>
+  
+    <compTag>0</compTag>
+  
+    <startDate>2018-01-12 00:00:00</startDate>
+  
+    <endDate>2037-12-31 23:59:59</endDate>
+  
+    <createDate>2018-01-12 16:23:30</createDate>
+  
+    <version>1.0</version>
+  
+    <productState>4</productState>
+  
+    <manageAreaCode>000001</manageAreaCode>
+  
+    <productNetType>1</productNetType>
+  
+    <saleDir>10006328</saleDir>
+  
+    <pmServiceTypeCodes>
+    
+      <serviceTypeCode>1303</serviceTypeCode>
+  
+    </pmServiceTypeCodes>
+  
+    <productPackages>
+    
+      <productPackage>
+      
+        <forceTag>1</forceTag>
+      
+        <defaultTag>1</defaultTag>
+      
+        <minNumber>-1</minNumber>
+      
+        <maxNumber>-1</maxNumber>
+      
+        <startDate>2018-01-12 00:00:00</startDate>
+      
+        <endDate>2037-12-31 23:59:59</endDate>
+      
+        <pmPackage>
+        
+          <packageId>2000037352</packageId>
+        
+          <packageName>[产品构成][主资费信息构成]</packageName>
+        
+          <packageTypeCode>2</packageTypeCode>
+        
+          <minNumber>-1</minNumber>
+        
+          <maxNumber>-1</maxNumber>
+        
+          <startDate>2018-01-12 00:00:00</startDate>
+        
+          <endDate>2037-12-31 23:59:59</endDate>
+        
+          <packageElements>
+          
+            <packageElement>
+            
+              <elementTypeCode>D</elementTypeCode>
+            
+              <defaultTag>1</defaultTag>
+            
+              <startDate>2018-01-12 00:00:00</startDate>
+            
+              <endDate>2037-12-31 23:59:59</endDate>
+            
+              <price>
+              
+                <priceId>53296</priceId>
+              
+                <priceType>0</priceType>
+              
+                <priceName>[构成2000037352]对应资费</priceName>
+              
+                <otherPrices>
+                
+                  <otherPrice>
+                  
+                    <priceOther>
+                    
+                      <content>30元500MB全国流量月包。其他业务规定详见发文。</content>
+                  
+                    </priceOther>
+                
+                  </otherPrice>
+              
+                </otherPrices>
+            
+              </price>
+          
+            </packageElement>
+        
+          </packageElements>
+      
+        </pmPackage>
+    
+      </productPackage>
+  
+    </productPackages>
+  
+    <productSaleAreas>
+    
+      <productSaleArea>
+      
+        <saleAreaType>00</saleAreaType>
+      
+        <saleAreaCode>00</saleAreaCode>
+    
+      </productSaleArea>
+  
+    </productSaleAreas>
+  
+    <productCustGroups>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>0</objectCustId>
+    
+      </productCustGroup>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>1</objectCustId>
+    
+      </productCustGroup>
+  
+    </productCustGroups>
+
+  </product>
+  <product operType="0" productCode="99130061">
+  
+    <productName>30元500MB全国流量月包-预付费</productName>
+  
+    <productExplain>[产品描述]新增  </productExplain>
+  
+    <productLine>
+    
+      <productLineCode>P01</productLineCode>
+    
+      <productLineName>语音通信</productLineName>
+  
+    </productLine>
+  
+    <productSeries>
+    
+      <seriesCode>P0103</seriesCode>
+    
+      <seriesName>移动电话</seriesName>
+  
+    </productSeries>
+  
+    <productCategory>
+    
+      <categoryCode>P010303</categoryCode>
+    
+      <categoryName>WCDMA电话</categoryName>
+  
+    </productCategory>
+  
+    <productMode>01</productMode>
+  
+    <serviceId>0</serviceId>
+  
+    <brandCode>G005</brandCode>
+  
+    <isGroup>0</isGroup>
+  
+    <prepayTag>2</prepayTag>
+  
+    <compTag>0</compTag>
+  
+    <startDate>2018-01-12 00:00:00</startDate>
+  
+    <endDate>2037-12-31 23:59:59</endDate>
+  
+    <createDate>2018-01-12 16:23:30</createDate>
+  
+    <version>1.0</version>
+  
+    <productState>4</productState>
+  
+    <manageAreaCode>000001</manageAreaCode>
+  
+    <productNetType>1</productNetType>
+  
+    <saleDir>10006328</saleDir>
+  
+    <pmServiceTypeCodes>
+    
+      <serviceTypeCode>1303</serviceTypeCode>
+  
+    </pmServiceTypeCodes>
+  
+    <productPackages>
+    
+      <productPackage>
+      
+        <forceTag>1</forceTag>
+      
+        <defaultTag>1</defaultTag>
+      
+        <minNumber>-1</minNumber>
+      
+        <maxNumber>-1</maxNumber>
+      
+        <startDate>2018-01-12 00:00:00</startDate>
+      
+        <endDate>2037-12-31 23:59:59</endDate>
+      
+        <pmPackage>
+        
+          <packageId>2000037353</packageId>
+        
+          <packageName>[产品构成][主资费信息构成]</packageName>
+        
+          <packageTypeCode>2</packageTypeCode>
+        
+          <minNumber>-1</minNumber>
+        
+          <maxNumber>-1</maxNumber>
+        
+          <startDate>2018-01-12 00:00:00</startDate>
+        
+          <endDate>2037-12-31 23:59:59</endDate>
+        
+          <packageElements>
+          
+            <packageElement>
+            
+              <elementTypeCode>D</elementTypeCode>
+            
+              <defaultTag>1</defaultTag>
+            
+              <startDate>2018-01-12 00:00:00</startDate>
+            
+              <endDate>2037-12-31 23:59:59</endDate>
+            
+              <price>
+              
+                <priceId>53298</priceId>
+              
+                <priceType>0</priceType>
+              
+                <priceName>[构成2000037353]对应资费</priceName>
+              
+                <otherPrices>
+                
+                  <otherPrice>
+                  
+                    <priceOther>
+                    
+                      <content>30元500MB全国流量月包。其他业务规定详见发文。</content>
+                  
+                    </priceOther>
+                
+                  </otherPrice>
+              
+                </otherPrices>
+            
+              </price>
+          
+            </packageElement>
+        
+          </packageElements>
+      
+        </pmPackage>
+    
+      </productPackage>
+  
+    </productPackages>
+  
+    <productSaleAreas>
+    
+      <productSaleArea>
+      
+        <saleAreaType>00</saleAreaType>
+      
+        <saleAreaCode>00</saleAreaCode>
+    
+      </productSaleArea>
+  
+    </productSaleAreas>
+  
+    <productCustGroups>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>0</objectCustId>
+    
+      </productCustGroup>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>1</objectCustId>
+    
+      </productCustGroup>
+  
+    </productCustGroups>
+
+  </product>
+  <product operType="0" productCode="99130062">
+  
+    <productName>50元1GB全国流量月包-后付费</productName>
+  
+    <productExplain>[产品描述]新增  </productExplain>
+  
+    <productLine>
+    
+      <productLineCode>P01</productLineCode>
+    
+      <productLineName>语音通信</productLineName>
+  
+    </productLine>
+  
+    <productSeries>
+    
+      <seriesCode>P0103</seriesCode>
+    
+      <seriesName>移动电话</seriesName>
+  
+    </productSeries>
+  
+    <productCategory>
+    
+      <categoryCode>P010303</categoryCode>
+    
+      <categoryName>WCDMA电话</categoryName>
+  
+    </productCategory>
+  
+    <productMode>01</productMode>
+  
+    <serviceId>0</serviceId>
+  
+    <brandCode>G005</brandCode>
+  
+    <isGroup>0</isGroup>
+  
+    <prepayTag>0</prepayTag>
+  
+    <compTag>0</compTag>
+  
+    <startDate>2018-01-12 00:00:00</startDate>
+  
+    <endDate>2037-12-31 23:59:59</endDate>
+  
+    <createDate>2018-01-12 16:23:30</createDate>
+  
+    <version>1.0</version>
+  
+    <productState>4</productState>
+  
+    <manageAreaCode>000001</manageAreaCode>
+  
+    <productNetType>1</productNetType>
+  
+    <saleDir>10006328</saleDir>
+  
+    <pmServiceTypeCodes>
+    
+      <serviceTypeCode>1303</serviceTypeCode>
+  
+    </pmServiceTypeCodes>
+  
+    <productPackages>
+    
+      <productPackage>
+      
+        <forceTag>1</forceTag>
+      
+        <defaultTag>1</defaultTag>
+      
+        <minNumber>-1</minNumber>
+      
+        <maxNumber>-1</maxNumber>
+      
+        <startDate>2018-01-12 00:00:00</startDate>
+      
+        <endDate>2037-12-31 23:59:59</endDate>
+      
+        <pmPackage>
+        
+          <packageId>2000037354</packageId>
+        
+          <packageName>[产品构成][主资费信息构成]</packageName>
+        
+          <packageTypeCode>2</packageTypeCode>
+        
+          <minNumber>-1</minNumber>
+        
+          <maxNumber>-1</maxNumber>
+        
+          <startDate>2018-01-12 00:00:00</startDate>
+        
+          <endDate>2037-12-31 23:59:59</endDate>
+        
+          <packageElements>
+          
+            <packageElement>
+            
+              <elementTypeCode>D</elementTypeCode>
+            
+              <defaultTag>1</defaultTag>
+            
+              <startDate>2018-01-12 00:00:00</startDate>
+            
+              <endDate>2037-12-31 23:59:59</endDate>
+            
+              <price>
+              
+                <priceId>53300</priceId>
+              
+                <priceType>0</priceType>
+              
+                <priceName>[构成2000037354]对应资费</priceName>
+              
+                <otherPrices>
+                
+                  <otherPrice>
+                  
+                    <priceOther>
+                    
+                      <content>50元1GB全国流量月包。其他业务规定详见发文。</content>
+                  
+                    </priceOther>
+                
+                  </otherPrice>
+              
+                </otherPrices>
+            
+              </price>
+          
+            </packageElement>
+        
+          </packageElements>
+      
+        </pmPackage>
+    
+      </productPackage>
+  
+    </productPackages>
+  
+    <productSaleAreas>
+    
+      <productSaleArea>
+      
+        <saleAreaType>00</saleAreaType>
+      
+        <saleAreaCode>00</saleAreaCode>
+    
+      </productSaleArea>
+  
+    </productSaleAreas>
+  
+    <productCustGroups>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>0</objectCustId>
+    
+      </productCustGroup>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>1</objectCustId>
+    
+      </productCustGroup>
+  
+    </productCustGroups>
+
+  </product>
+  <product operType="0" productCode="99130063">
+  
+    <productName>50元1GB全国流量月包-预付费</productName>
+  
+    <productExplain>[产品描述]新增  </productExplain>
+  
+    <productLine>
+    
+      <productLineCode>P01</productLineCode>
+    
+      <productLineName>语音通信</productLineName>
+  
+    </productLine>
+  
+    <productSeries>
+    
+      <seriesCode>P0103</seriesCode>
+    
+      <seriesName>移动电话</seriesName>
+  
+    </productSeries>
+  
+    <productCategory>
+    
+      <categoryCode>P010303</categoryCode>
+    
+      <categoryName>WCDMA电话</categoryName>
+  
+    </productCategory>
+  
+    <productMode>01</productMode>
+  
+    <serviceId>0</serviceId>
+  
+    <brandCode>G005</brandCode>
+  
+    <isGroup>0</isGroup>
+  
+    <prepayTag>2</prepayTag>
+  
+    <compTag>0</compTag>
+  
+    <startDate>2018-01-12 00:00:00</startDate>
+  
+    <endDate>2037-12-31 23:59:59</endDate>
+  
+    <createDate>2018-01-12 16:23:30</createDate>
+  
+    <version>1.0</version>
+  
+    <productState>4</productState>
+  
+    <manageAreaCode>000001</manageAreaCode>
+  
+    <productNetType>1</productNetType>
+  
+    <saleDir>10006328</saleDir>
+  
+    <pmServiceTypeCodes>
+    
+      <serviceTypeCode>1303</serviceTypeCode>
+  
+    </pmServiceTypeCodes>
+  
+    <productPackages>
+    
+      <productPackage>
+      
+        <forceTag>1</forceTag>
+      
+        <defaultTag>1</defaultTag>
+      
+        <minNumber>-1</minNumber>
+      
+        <maxNumber>-1</maxNumber>
+      
+        <startDate>2018-01-12 00:00:00</startDate>
+      
+        <endDate>2037-12-31 23:59:59</endDate>
+      
+        <pmPackage>
+        
+          <packageId>2000037355</packageId>
+        
+          <packageName>[产品构成][主资费信息构成]</packageName>
+        
+          <packageTypeCode>2</packageTypeCode>
+        
+          <minNumber>-1</minNumber>
+        
+          <maxNumber>-1</maxNumber>
+        
+          <startDate>2018-01-12 00:00:00</startDate>
+        
+          <endDate>2037-12-31 23:59:59</endDate>
+        
+          <packageElements>
+          
+            <packageElement>
+            
+              <elementTypeCode>D</elementTypeCode>
+            
+              <defaultTag>1</defaultTag>
+            
+              <startDate>2018-01-12 00:00:00</startDate>
+            
+              <endDate>2037-12-31 23:59:59</endDate>
+            
+              <price>
+              
+                <priceId>53302</priceId>
+              
+                <priceType>0</priceType>
+              
+                <priceName>[构成2000037355]对应资费</priceName>
+              
+                <otherPrices>
+                
+                  <otherPrice>
+                  
+                    <priceOther>
+                    
+                      <content>50元1GB全国流量月包。其他业务规定详见发文。</content>
+                  
+                    </priceOther>
+                
+                  </otherPrice>
+              
+                </otherPrices>
+            
+              </price>
+          
+            </packageElement>
+        
+          </packageElements>
+      
+        </pmPackage>
+    
+      </productPackage>
+  
+    </productPackages>
+  
+    <productSaleAreas>
+    
+      <productSaleArea>
+      
+        <saleAreaType>00</saleAreaType>
+      
+        <saleAreaCode>00</saleAreaCode>
+    
+      </productSaleArea>
+  
+    </productSaleAreas>
+  
+    <productCustGroups>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>0</objectCustId>
+    
+      </productCustGroup>
+    
+      <productCustGroup>
+      
+        <objectCustType>0</objectCustType>
+      
+        <objectCustId>1</objectCustId>
+    
+      </productCustGroup>
+  
+    </productCustGroups>
+
+  </product>
+</products>

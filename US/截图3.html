@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="myPage">
+<div id="screen" style="height: 80px;width: 300px;background-color: #aee4ff" onchange="createImage()">
+    我是div
+    性别:
+    <input type="radio" name="sex">男
+    <input type="radio" name="sex">女
+    <input type="text">用户名
+</div>
+<a id="aTag">This is a test</a>
+<a href="../images/岛.mp4" download="1.jpg">下载视频为图片</a>
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+<script type="text/javascript">
+//    html2canvas生成的图片，checkbox和radio的选中项无法截图。
+//    可以用的，因为你已进入页面就生成图片了，后面的点击就没效果了，可以这么着。
+
+//    var aTag = document.createElement("a");
+//    aTag.innerHTML = "This is a test";
+//    aTag.setAttribute("style", "position:absolute; top:30%; z-index:999");
+//    document.body.appendChild(aTag);
+    function createImage(){
+        html2canvas(document.getElementById('screen'),{
+            allowTaint:true,
+            height: 500
+        }).then(function(canvas) {
+            console.log(canvas);
+            aTag.setAttribute("href", canvas.toDataURL());
+            aTag.setAttribute("download", "myPic.png");
+        });
+    }
+</script>
+</html>

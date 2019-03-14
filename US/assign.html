@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let obj={name:'tom',age:{num:12}}
+
+    let newObj=Object.assign({}, obj)
+    newObj.name='lili'
+    newObj.age.num=20
+    console.log(obj)//{name: "tom",age: {num: 20}}
+    console.log(newObj)//{name: "lili",age: {num: 20}}
+        //只拷贝了最外的一层
+</script>
+</body>
+</html>

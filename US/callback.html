@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    (function a() {
+
+    })(x());//函数也可以作为一个参数传入
+
+    (function a(x) {
+        x()
+    })(x);
+
+    function x() {
+        console.log(111)
+    }
+
+    let name = 'tom';
+    (function (x) {
+        console.log(x)
+    })(name)
+
+    console.log('///////////////////////')
+</script>
+<script>
+    let aa = 1
+    function d() {
+        console.log('函数d')
+    }
+    function a(callback) {
+        console.log("我是parent函数a！");
+        d();
+        if (typeof callback === "function") {
+            //alert(callback);
+            callback();
+        }
+    }
+    a(aa)
+    a(x)
+</script>
+<script>
+    function isEven(date,callback) {
+        if (typeof date ==='number'){
+            if(date%2){
+                callback(null,'奇数')
+            }else{
+                callback(null,'偶数')
+            }
+        }else{
+            callback(new Error('不是数字'))
+
+        }
+    }
+    isEven(2,(error,data)=>{
+        if (error)throw error
+        console.log(data)
+    })
+</script>
+</body>
+</html>

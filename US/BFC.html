@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #dd {
+            width: 500px;
+            border: 1px solid lightcoral;
+            overflow: hidden;
+        }
+
+        #d1 {
+            width: 100px;
+            height: 50px;
+            background: #eee;
+            float: left;
+        }
+
+        #d2 {
+            width: 100px;
+            height: 50px;
+            background: #dbbbee;
+            float: left;
+        }
+
+
+
+
+        .wrapper, .container {
+            border: 2px solid #cff;
+            width: 500px;
+        }
+
+        .wrapper {
+            float: left;
+        }
+
+        .first, .last {
+            width: 300px;
+            height: 50px;
+            margin: 20px;
+        }
+
+        .first {
+            background-color: pink;
+        }
+
+        .last {
+            background-color: yellow;
+        }
+
+        .bfc {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<div id="dd">
+    <div id="d1">11</div>
+    <div id="d2">22</div>
+</div>
+
+
+<div class="wrapper">
+    <div class="first"></div>
+    <div class="last"></div>
+</div>
+<div class="container">
+    <div class="first"></div>
+    <div class="last bfc"></div>
+</div>
+</body>
+</html>

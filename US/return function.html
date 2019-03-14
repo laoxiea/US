@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function aa() {
+        return function () {
+            console.log(111111)
+        }
+    }
+    aa()()
+    var SDK={
+        para:{id:1,name:'tom'},
+        init:function () {
+            this.create()
+        },
+        create:function () {
+            console.log('create')
+        }
+    }
+    SDK.init()
+</script>
+</body>
+</html>

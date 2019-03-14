@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>需要秘钥（key）及秘钥偏移量（iv）的aes加解密</title></head>
+<body>
+<div>
+
+    https://super.wo.cn/dataorder/index.html?phone=t4PuBYpyB5dOm%2B2nPy0bqA%3D%3D&sysType=zXIdB227RtPKcl1%2F9OfPLQ%3D%3D
+</div>
+<!--<script src="tripledes.js"></script>-->
+<script src="../js/AES.js"></script>
+　　//引入的js文件在该链接中：https://github.com/hellobajie/AES-of-JavaScript
+<script>
+    var key = CryptoJS.enc.Utf8.parse("Ft08QZ9fsFUm1meK");
+    var iv = CryptoJS.enc.Utf8.parse('Fa08QZ9fsFUm1meK');
+    function Encrypt(word) {
+        srcs = CryptoJS.enc.Utf8.parse(word);
+        var encrypted = CryptoJS.AES.encrypt(srcs, key, {iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7});
+        return encrypted.ciphertext.toString().toUpperCase();
+    }
+    function Decrypt(word) {
+        var encryptedHexStr = CryptoJS.enc.Hex.parse(word);
+        var srcs = CryptoJS.enc.Base64.stringify(encryptedHexStr);
+        var decrypt = CryptoJS.AES.decrypt(srcs, key, {iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7});
+        var decryptedStr = decrypt.toString(CryptoJS.enc.Utf8);
+        return decryptedStr.toString();
+    }
+    var mm = Encrypt('13110083058')
+    console.log(mm);
+    var jm = Decrypt(mm);
+    console.log(jm)
+</script>
+<script>
+    function encryptFun(data) {
+        let key  = CryptoJS.enc.Latin1.parse("45df45d454gydd67");
+        let iv   = CryptoJS.enc.Latin1.parse("4024594hj54c7afk");
+//        let key  = CryptoJS.enc.Latin1.parse('Ft08QZ9fsFUm1meK');
+//        let iv   = CryptoJS.enc.Latin1.parse('Fa08QZ9fsFUm1meK');
+        //加密
+        let encrypted = CryptoJS.AES.encrypt(
+            data,
+            key,
+            {iv:iv,mode:CryptoJS.mode.CBC,padding:CryptoJS.pad.Pkcs7
+            });
+        console.log('encrypted: ' + encrypted);
+        //解密
+        let decrypted = CryptoJS.AES.decrypt(encrypted,key,{iv:iv,padding:CryptoJS.pad.Pkcs7});
+        console.log('decrypted: '+decrypted.toString(CryptoJS.enc.Utf8));
+    }
+    encryptFun("13789092234")
+    //https://super.wo.cn/dataorder/index.html?sysType=9xHeXiAumVscVibQZPh%2FaQ%3D%3D&phone=S2%2FPZ7lJmH61glToExPRbw%3D%3D
+//    decodeURIComponent
+</script>
+
+</body>
+</html>

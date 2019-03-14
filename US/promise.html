@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function promiseTest() {
+        let a = 2
+        return new Promise(function (resolve, reject) {
+            if (a > 1) {
+                resolve(console.log(1))
+            } else {
+                reject(console.log(2))
+            }
+        }).then(() => {
+            console.log(3)
+        }).then(() => {
+            console.log(4)
+        }).then(() => {
+            console.log(5)
+        }).then(() => {
+            console.log(6)
+        }).then(() => {
+            console.log(7)
+        }).catch((err) => {
+            console.log(err)
+        })
+    }
+
+    promiseTest()
+
+//    走reject就走catch，走resolve就走then
+    Promise.reject('该promise已被拒绝')
+        .then(function (reason) {
+            console.log('then:', reason);
+        }).catch(function (reason) {
+        console.log('catch:', reason);
+    });
+
+    Promise.resolve('该promise已被执行')
+        .then(function (reason) {
+            console.log('then:', reason);
+        })
+        .catch(function (reason) {
+        console.log('catch:', reason);
+    });
+</script>
+</body>
+</html>

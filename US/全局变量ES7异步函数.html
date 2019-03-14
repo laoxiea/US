@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    (function xx() {
+        window.on = '开关'
+    })()
+    console.log(on)
+</script>
+<script>
+    async function he() {
+        console.log(111)
+        return 123
+    }
+
+    //异步函数总是返回一个promise对象
+    he().then(x => {
+        console.log(x)
+    })
+
+    async function he2() {
+        return await new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('resolve了')
+            }, 2000)
+        })
+    }
+
+    he2().then((e) => {
+        console.log(e)
+    })
+
+
+    async function f() {
+        return 1
+    }
+
+    f().then((e) => {
+        console.log(e)
+    })
+
+    new Promise((resolve, reject) => {
+        resolve('resolve了3213123')
+    }).then((e) => {
+        console.log(e)
+    }).catch((e)=>{
+        console.log(e)
+    })
+</script>
+
+</body>
+</html>

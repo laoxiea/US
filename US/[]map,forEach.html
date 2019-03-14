@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="d1" title="nini">1</div>
+<script>
+    console.log(d1.title)
+    var a = 10;
+    console.log(a)
+    var a = a || [];
+    console.log(a)
+    console.log(d1.clientHeight)//获取元素尺寸
+    console.log('-----------------------------')
+
+    var arr = [11, 22, 33, 44]
+
+    /*
+     * 数组中有几项，那么传递进去的匿名回调函数就需要执行几次；
+     理论上这个方法是没有返回值的，仅仅是遍历数组中的每一项，不对原来数组进行修改；
+     但是可以自己通过数组的索引来修改原来的数组；*/
+    var arr0 = arr.forEach(function (value, index, arr) {
+
+        console.log(value)//原数组不改变
+        console.log(index)
+        console.log(arr)
+        return value * 2
+    })
+    console.log(arr0)//undefined
+    /*
+     * 区别：map的回调函数中支持return返回值；return的是啥，相当于把数组中的这一项变为啥
+     * （并不影响原来的数组，只是相当于把原数组克隆一份，把克隆的这一份的数组中的对应项改变了）；*/
+    var arr1 = arr.map(function (value, index, arr) {
+        console.log(value)//原数组不改变
+        console.log(index)
+        console.log(arr)
+        return value * 2
+    })
+    console.log(arr1)//[22, 44, 66, 88]
+</script>
+<script>
+    let list = [
+        {transferTotal: 4463838, touchTotal: 4463861, channelName: "其他", channelId: "OTHER"},
+        {transferTotal: 10867488, touchTotal: 11260458, channelName: "支付宝", channelId: "ALIPAY"},
+        {transferTotal: 1036820, touchTotal: 1094788, channelName: "微信", channelId: "WECHAT"}
+    ];
+    var order = {
+        "微信": 0,
+        "支付宝": 1,
+        "其他": 2,
+    }
+    var orderArr = list.sort(
+        (a, b) =>
+        order[a.channelName] - order[b.channelName]
+    )
+//    let result = ['微信', '支付宝', '其他'].map(name => list.find(item => item.channelName === name));
+
+    console.log(orderArr)
+</script>
+<script>
+    let listAll = [
+        {name: 'tom', age: 10},
+        {name: 'lee', age: 11},
+        {name: 'rose', age: 12},
+        {name: 'jane', age: 13}
+    ]
+    let info = [
+        {name: 'lee'},
+        {name: 'rose'}
+    ]
+    const newList1 = listAll.filter(function (val) {
+        return info.some(function (item) {
+            return item.name === val.name
+        })
+    })
+    const newList2 = listAll.filter(val => info.some(item => item.name === val.name))
+    console.log(newList1)
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function f1(){
+        var n=999;
+        nAdd=function(){n+=1}
+        function f2(){
+            console.log(n);
+        }
+        return f2;
+    }
+    var result=f1();
+    result(); // 999
+    nAdd();
+    result(); // 1000
+
+    var name = "The Window";
+    var object2 = {
+        name : "My Object",
+        getNameFunc : function(){
+            return function(){
+                return this.name;
+            };
+        }
+    };
+    console.log(object2.getNameFunc()()); //The Window
+
+    var name1 = "The Window";
+    var object1 = {
+        name1 : "My Object",
+        getNameFunc : function(){
+            var that = this;
+            return function(){
+                return that.name1;
+            };
+        }
+    };
+    console.log(object1.getNameFunc()()); //My Object
+</script>
+<script>
+    var a={}
+    console.log(toString.call(a))
+    console.log(Object)
+</script>
+<script>
+    function A(){
+        function B(){
+            console.log("Hello Closure!");
+        }
+        return B;
+    }
+    var C = A();
+    C();//Hello Closure!
+</script>
+<script>
+    function FF1() {
+        var f=100
+        return function () {
+            console.log(f, this)
+        }
+    }
+    let ff1=FF1()
+    var f=200
+    ff1()//100  window
+</script>
+<input type="button" value="按钮" disabled>输入
+</body>
+</html>

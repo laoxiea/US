@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li class="col">0</li>
+    <li class="col">1</li>
+    <li class="col">2</li>
+    <li class="col">3</li>
+</ul>
+<script>
+    var col = document.getElementsByClassName('col');
+    for (var i = 0; i < col.length; i++) {
+         (function () {
+             var n = i;
+             col[n].onclick = function () {
+                 console.log(n)
+             }
+         })();
+//        (function (n) {
+//            col[i].onclick =function () {
+//                console.log(n)
+//            }
+//        })(i);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    setTimeout(function(){
+//处理中
+        console.log(1)
+        setTimeout(arguments.callee, 1000);
+    }, 1000);
+    //相当于
+//    setInterval(function () {
+//        console.log(1)
+//    },1000)
+</script>
+<script>
+
+    function aa(n) {
+        let arr=[]
+        return (function () {
+            arr.unshift(n)
+            n--
+            if (n>0){
+                arguments.callee()
+            }
+            console.log(arr)
+        })()
+    }
+/*现在已经不推荐使用arguments.callee()；
+ 原因：访问 arguments 是个很昂贵的操作，因为它是个很大的对象，每次递归调用时都需要重新创建。
+ 影响现代浏览器的性能，还会影响闭包。
+用以下办法*/
+    function bb(n) {
+        let arr=[]
+        return (function x() {
+            arr.unshift(n)
+            n--
+            if (n>0){
+                x()
+            }
+            console.log(arr)
+        })()
+    }
+
+    aa(5)
+    bb(5)
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0
+        }
+        #d{
+            display: flex;
+            height: 150px;
+        }
+        #d1{
+            flex: 0 0 80px;
+            width: 80px;
+            background: #dfeff6;
+        }
+        #d2{
+            flex:1;
+            background: #eedbe5;
+        }
+        #dd{
+            margin-top: 20px;
+        }
+        #dd,#dd div{
+            height: 150px;
+        }
+        #dd1{
+            width: 80px;
+            float: left;
+            background: #eedbe5;
+        }
+        #dd2{
+            width: calc(100% - 80px);
+            float: right;
+            background: #dfeff6;
+        }
+        #ddd{
+            position: relative;
+            margin-top: 20px;
+            height: 150px;
+        }
+        #ddd1{
+            width: 80px;
+            height: 150px;
+            background: #dfeff6;
+        }
+        #ddd2{
+            position: absolute;
+            left: 80px;
+            top:0;
+            right: 0;
+            bottom: 0;
+            background: #eedbe5;
+        }
+
+    </style>
+</head>
+<body>
+<div id="d">
+    <div id="d1"></div>
+    <div id="d2"></div>
+</div>
+<div id="dd">
+    <div id="dd1"></div>
+    <div id="dd2"></div>
+</div>
+<div id="ddd">
+    <div id="ddd1"></div>
+    <div id="ddd2"></div>
+</div>
+<style>
+    #dddd>div{
+        height: 100px;
+
+    }
+    #dddd1{
+        float: left;
+        width: 200px;
+        background: #eeb1b1;
+    }
+    #dddd2{
+        background: #eee;
+    }
+</style>
+<div id="dddd">
+    <div id="dddd1"></div>
+    <div id="dddd2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at culpa, cupiditate eligendi iste laboriosam magnam minus modi nemo nesciunt, nulla qui quos repellendus reprehenderit repudiandae soluta unde ut veritatis.</div>
+</div>
+
+</body>
+</html>

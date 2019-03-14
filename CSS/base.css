@@ -1,0 +1,20 @@
+.font {
+  font-size: 40px;
+  font-weight: bold;
+}
+.box {
+  color: #ffffff;
+  width: 300px;
+  height: 200px;
+  background: #d9f9fb;
+  border: 3px solid #ff7278;
+}
+.pageBox {
+  font-size: 40px;
+  font-weight: bold;
+  background: #73f4fb;
+  color: #23dbe5;
+  width: 200px;
+  height: 288px;
+  border: 6px dotted #92a794;
+}

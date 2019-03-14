@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [
+        {
+            AREA_ID: "34",
+            AREA_NAME: "江苏",
+            FAIL_TOTAL: 7,
+            SUCC_TOTAL: 5,
+            TOTAL: 12
+        },
+        {
+            AREA_ID: "91",
+            AREA_NAME: "辽宁",
+            FAIL_TOTAL: 47,
+            SUCC_TOTAL: 30,
+            TOTAL: 77
+        }]
+    function sumByKey(keyName) {
+        let sum=0
+        arr.forEach(function (value,key) {
+            sum+=arr[key][keyName]
+        })
+//        let sum=0
+//        for (let i in arr){
+//            sum+=arr[i][keyName]
+//        }
+        console.log(sum)
+    }
+    sumByKey('FAIL_TOTAL')
+    sumByKey('TOTAL')
+</script>
+</body>
+</html>

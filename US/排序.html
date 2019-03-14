@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [12, 3, 4, 11, 6, 5, 10, 13]
+    let len = arr.length
+    for (let i = 0; i < len - 1; i++) {
+        for (let j = 0; j < len - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let tmp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = tmp
+            }
+        }
+    }
+    console.log(arr)
+
+
+    let arr0 = [1, 3, 5, 7, 9]
+
+    arr0.splice(3, 0, 'a')
+    console.log(arr0)
+    arr0.splice(5, 0, 'b', 'c')
+    console.log(arr0)
+
+
+    let arr1 = [1, 3, 5, 7, 9]
+    let arr2 = [2, 4, 6, 8, 10]
+
+    let a = 1
+    while (a < 1) {
+        a++
+        console.log(a)
+    }
+    let b = 1
+    do {
+        b++
+        console.log(b)
+    } while (b < 1)
+
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] > arr2[j]) {
+                break
+            } else {
+                arr2.splice(j, 0, arr1[i])
+                arr1.splice(i, 1)
+            }
+        }
+    }
+    console.log(arr1, arr2)
+</script>
+
+<!--平时喜欢研究网站的代码
+
+做过什么业务？
+独立负责过几个管理系统，业务系统，手厅的活动页（答题领腾讯会员，），套餐办理页，流量订购页
+存量用户1周完成架构搭建，主要难点是权限的控制，二级菜单的控制（两种），权限有路由的权限还有按钮请求接口的权限，如果是老式的一次性都渲染，有现成的，也简单；最初是每个一级菜单包括一个二级菜单，然后渲染对应的功能组件，
+重复性太高，通过传入一级菜单来，展示二级菜单，通过watch route.path来控制二级菜单的显隐，还想过通过判断二级菜单的个数，如果只有一个，就隐藏，为了统一，只有一个菜单的时候也是分为1级和1个二级菜单；刷新router实例化的问题，本身不保存，可以在刷新页面发请求拿过来再重新组合权限菜单，权限系统是和架构两人讨论如何可扩展，适应业务需要，
+管理系统不需要SEO，用户可控。在用控件的时候比如树形，配菜单的时候，选权限的时候
+高危用户，4个菜单，3个单独组件，数据回填自己研究的，
+
+首页的地图，屏幕适配，
+负责的业务有什么业绩？-->
+
+
+</body>
+</html>

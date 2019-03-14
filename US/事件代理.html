@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul">
+    <li>11</li>
+    <li>22</li>
+    <li>33</li>
+</ul>
+<button onclick="append()">添加</button>
+<script>
+    function append() {
+        var li =document.createElement("li");
+        li.innerHTML=44
+        ul.appendChild(li)
+    }
+    ul.addEventListener('click',function (e) {
+        console.log(e.target)
+    },false)//默认false
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[1,7,2,5,3,8];
+    let arr1=[1,7];
+    let arr2=[8,5];
+    let arr3=[9,5];
+    let arr0=[...arr1,...arr2,...arr3,100];//[1, 7, 8, 5, 9, 5, 100]
+    console.log(arr0);
+    let obj1={a:1,b:2,c:3};
+    let obj2={c:30,d:40,e:50};
+    let obj={...obj1,...obj2};//合并对象，同名的后者会覆盖前者
+    console.log(obj);//{a: 1, b: 2, c: 30, d: 40, e: 50}
+    console.log(Math.max(1,7,2,5,3));
+    console.log(Math.max.apply(null,arr));
+    console.log(Math.min.apply(null,arr));
+</script>
+</body>
+</html>

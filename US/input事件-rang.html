@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <style>
+        input[type=range] {
+            -webkit-appearance: none;/*清除系统默认样式*/
+            width: 60%;
+            background: -webkit-linear-gradient(#61bd12, #61bd12) no-repeat, #ddd;/*设置左边颜色为#61bd12，右边颜色为#ddd*/
+            background-size: 25% 100%;/*设置左右宽度比例*/
+            height: 3px;/*横条的高度*/
+        }
+        /*拖动块的样式*/
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;/*清除系统默认样式*/
+            height: 26px;/*拖动块高度*/
+            width: 26px;/*拖动块宽度*/
+            background: #fff;/*拖动块背景*/
+            border-radius: 50%; /*外观设置为圆形*/
+            border: solid 1px #ddd; /*设置边框*/
+        }
+    </style>
+</head>
+<body>
+<input id="in1" type="range" min="100" max="2000" step="10" value="500" oninput="aa()">
+<span id="sp1"></span><br>
+<input id="in3" type="range" min="100" max="2000" step="10">
+<span id="sp3"></span><br>
+<input id="in2" type="text" oninput="bb()">
+<span id="sp2"></span><br>
+
+<progress></progress>
+<script>
+    function aa() {
+        console.log(in1.value)
+        sp1.innerHTML=in1.value
+        in1.style.backgroundSize=(in1.value/in1.max)*100+'% 100%'
+//        in1.style.cssText = 'background-size: '+(in1.value/in1.max)*100+'% 100%;'
+    }
+    in3.oninput=function () {
+        console.log(in3.value)
+        sp3.innerHTML=in3.value
+    }
+    function bb() {
+        console.log(in2.value)
+        sp2.innerHTML=in2.value
+    }
+</script>
+</body>
+</html>

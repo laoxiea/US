@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var $={}
+    function A() {
+        console.log(1)
+    }
+//    $.fn = {
+//        hello:function () {
+//            console.log('hello')
+//        }
+//    }
+//    $.prototype=A.prototype=$.fn
+//    $.prototype={
+//        say:function () {
+//            console.log('say')
+//        }
+//    }
+//    $.prototype.say()
+//
+//
+//    setTimeout(function () {
+//        console.log(1)
+//    },1000)
+//    setTimeout(function () {
+//        console.log(2)
+//    },0)
+//    console.log(3)
+</script>
+<script>
+    function Animal() {
+        this.fuck=function () {
+            console.log('fuck')
+        }
+    }
+    function Dog() {
+        this.wang=function () {
+            console.log('wang')
+        }
+    }
+    Dog.prototype=new Animal()
+    var hashiqi=new Dog()
+    hashiqi.fuck()
+</script>
+<script>
+    class Animal{
+        constructor(name){
+            this.name=name
+        }
+        fuck(){
+            console.log('fuck'+this.name)
+        }
+    }
+    class Dog extends Animal{
+        constructor(name){
+            super(name)
+        }
+    }
+    let hashiqi= new Dog('hashiqi')
+    hashiqi.fuck()
+    console.log(hashiqi.name)
+</script>
+</body>
+</html>

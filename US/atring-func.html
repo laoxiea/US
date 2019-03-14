@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function ab(a) {
+        console.log(a)
+    }
+
+    var str='ab("我是参数"+111)'
+    console.log(typeof str)
+
+    function eval1(fn) {
+        var Fn = Function;  //一个变量指向Function，防止有些前端编译工具报错
+        return new Fn('return ' + fn)();
+    }
+    eval1(str)
+</script>
+</body>
+</html>

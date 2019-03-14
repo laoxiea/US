@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+</div>
+<script>
+    let timestamp = Date.parse(new Date());
+    function timestampToTime(timestamp) {
+        let date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        let Y = date.getFullYear()
+        let M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+        let D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+        let h = date.getHours() < 10 ? '0' + date.getHours() : date.getHours();
+        let m = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
+        let s = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+        return Y + M + D + h + m + s;
+    }
+    console.log(timestamp)
+    console.log(timestampToTime(timestamp))
+    let now = new Date().toISOString()// 加8小时即为现在的北京时间
+    let now1 = new Date()// 加8小时即为现在的北京时间
+    console.log(now, '\n' + now1)
+
+    function formatDateTime(date) {//GMT转换为标准时间
+        if (date===''){
+            return '1'
+        }
+        let y = date.getFullYear();
+        let m = date.getMonth() + 1;
+        m = m < 10 ? ('0' + m) : m;
+        let d = date.getDate();
+        d = d < 10 ? ('0' + d) : d;
+        let h = date.getHours();
+        h = h < 10 ? ('0' + h) : h;
+        let minute = date.getMinutes();
+        minute = minute < 10 ? ('0' + minute) : minute;
+        let s = date.getSeconds();
+        s = s < 10 ? ('0' + s) : s;
+        console.log((y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + s));
+        return(y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + s);
+    }
+    formatDateTime(new Date());
+
+    function formatDate(nows) {
+        if(!nows)return ''
+        function add0(m){return m<10?'0'+m:m }
+        let now=new Date(nows);
+        let year=now.getFullYear();
+        let month=now.getMonth()+1;
+        let date=now.getDate();
+        let hour=now.getHours();
+        let minute=now.getMinutes();
+        let second=now.getSeconds();
+        return year+"-"+add0(month)+"-"+add0(date)+" "+add0(hour)+":"+add0(minute)+":"+add0(second);
+    }
+    let d=new Date(1522293300000);
+    console.log(formatDate(d));
+
+    let a={};
+    console.log(a.name);
+    let b=['tom',{name:1}];
+    console.log(b[1].name)
+</script>
+<script>
+//    参数拼接URL
+    function parseParam(obj){
+        let paramStr="";
+        if(typeof obj === 'undefined'){
+            return null;
+        }else{
+            for (let i in obj) {
+                paramStr += '&' + i + '=' + obj[i]
+            }
+        }
+        return paramStr.substr(1);
+    }
+    console.log(parseParam({a:1,b:2}))
+</script>
+</body>
+</html>

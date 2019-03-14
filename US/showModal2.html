@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .mask{
+            position:absolute;
+            width: 100%;
+            height:100%;
+            background: rgba(0,0,0,.5);
+            font-size: 0;
+            opacity: 0;
+        }
+        .toast{
+            position: absolute;
+            top:50%;
+            left:50%;
+            width: 80%;
+            height:150px;
+            padding:25px;
+            background: #fff;
+            transform:translate(-50%,-50%);
+            -ms-transform:translate(-50%,-50%);     /* IE 9 */
+            -moz-transform:translate(-50%,-50%);    /* Firefox */
+            -webkit-transform:translate(-50%,-50%);/* Safari 和 Chrome */
+            -o-transform:translate(-50%,-50%);     /* Opera */
+            z-index: 100;
+            opacity: 0;
+        }
+        .modal-title{
+            font-size:22px;
+        }
+        .modal-content{
+            font-size:17px;
+            padding:15px 0;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<button onclick="showModal({title: '提示', content: '手机号码'})">弹框</button>
+
+<script src="../js/jquery.min.js"></script>
+<script>
+    /*
+     * 模态框
+     * */
+    function showModal({title: title, content: content}) {
+        title = title ? title : '';
+        content = content ? content : '';
+        if (document.getElementsByClassName('mask').length === 0) {
+            $('body').append(`
+            <div data-modal class="mask"></div>
+            <div data-modal class="toast">
+                <p class="modal-title">${title}</p>
+                    <div class="modal-content">${content}</div>
+                    <div class="confirm">确定</div>
+            </div>`
+            );
+            $('[data-modal]').animate({opacity: 1}, 200)
+        }
+    }
+
+    function closeModal() {
+        $('[data-modal]').animate({opacity: 0}, 200, function () {
+            $('[data-modal]').remove()
+        })
+    }
+    $('body').on('click', '.confirm,.mask', function () {
+        closeModal()
+    })
+</script>
+</body>
+</html>

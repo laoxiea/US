@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="in" type="text" value="call改变this指向">
+<script>
+    let stu = {
+        aaa: function (x,y) {
+            return 'aaa:'+x+y
+        }
+    }
+    let teach = {
+        bbb: function () {
+            return 'bbb'
+        }
+    }
+    /*供爷法则*/
+    console.log(stu.aaa.call(teach,1,2))//对象借用方法    aaa:12
+    console.log(stu.aaa.call(teach.bbb,1,2))//对象借用方法  函数本质也是对象
+    console.log(stu.aaa.apply(teach.bbb,[1,2]))//对象借用方法  函数本质也是对象
+    /*唯一区别，参数和数组*/
+</script>
+<script>
+    /*call改变this指向!!!!!!!!!!!!!!*/
+    var value='全局变量'
+//    let value='全局变量' 下边输入undefined
+    function fun() {
+        console.log(this.value)
+    }
+    fun.call(window)//全局变量
+
+    let aa={value:'aa'}
+    fun.call(aa)//aa
+    fun.call(document.getElementById('in'))//call改变this指向
+</script>
+<script>
+    var notRealArr={0:'零',1:'一',2:'二',length:2}
+    console.log(Array.prototype.slice.call(notRealArr))//必须用slice
+</script>
+<script>
+    arr=[1,2,3,4,5]//没改原数组
+    console.log(arr.slice(0,3))
+    console.log(arr.splice(3,1))
+    console.log(arr)
+</script>
+<script>
+    //caller返回被调用的，查看函数是被谁调用了
+    function a() {
+        console.log(a.caller.toString())
+        console.log('a调用了')
+    }
+    function b() {
+        a()
+    }
+    b()
+</script>
+<script>
+    var c,d,e,f
+    console.log(Object.prototype.toString.call(a) === '[object String]')  //true;
+    console.log(Object.prototype.toString.call(b) === '[object Number]') // true;
+    console.log(Object.prototype.toString.call(c) === '[object Array]') // true;
+    console.log(Object.prototype.toString.call(d) === '[object Date]') // true;
+    console.log(Object.prototype.toString.call(e) === '[object Function]') // true;
+    console.log(Object.prototype.toString.call(f) === '[object Function]') // true;
+</script>
+<script>
+
+    function bbb(x,y,z){
+        console.log(x+y+z);
+    }
+
+    bbb.apply(null,[1,2,3]); // 1 2 3
+</script>
+</body>
+</html>

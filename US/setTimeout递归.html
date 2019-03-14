@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1 id="h1"></h1>
+<body>
+<script>
+    time=0
+    sustain=3000
+    speed = 10
+    a=100
+    var t0=setInterval(function () {
+        h1.innerHTML=a++
+    },10)
+    var tt=setInterval(function () {
+        time++
+        if (time>=sustain/1000){
+            clearInterval(tt)
+            clearInterval(t0)
+        }
+    },1000)
+    setTimeout(function () {
+        function fun(){
+            h1.innerHTML=a++
+            let t1=setTimeout(fun, speed+=20)
+            if (speed>=1000){
+                clearTimeout(t1)
+            }
+        }
+        setTimeout(fun, speed)
+    },sustain)
+
+
+</script>
+</body>
+</html>

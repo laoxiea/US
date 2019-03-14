@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>1111</div>
+<div>2222</div>
+<div>3333</div>
+<script>
+    var col = document.getElementsByTagName('div');
+//    for (var i = 0; i < 3; i++) {
+//        (function () {
+//            var n=i;
+//            col[n].onclick = function () {
+//                console.log(n)
+//            }
+//        })();
+//    }
+    for (var i = 0; i < 3; i++) {
+        (function (i) {
+            col[i].onclick = function () {
+                console.log(i)
+            }
+        })(i);
+    }
+    a()
+    function a() {
+        console.log(arguments)
+//    "use strict"
+        x = 1
+        console.log(x)
+    }
+
+    let b = function () {
+        console.log(2)
+    }
+    b()
+</script>
+</body>
+</html>

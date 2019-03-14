@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a=''
+    console.log(typeof a)
+    console.log(typeof !!a)
+    if (a){
+        console.log(1)
+    }else{
+        console.log(2)
+    }
+    console.log(encodeURI('result.html?res=我爱你'));
+    console.log(encodeURIComponent('result.html?res=我爱你'));
+    console.log(decodeURI('%E6%88%91%E7%88%B1%E4%BD%A0'))
+    console.log(escape('我打'))
+    console.log(unescape('%u6211%u6253'))
+</script>
+</body>
+</html>

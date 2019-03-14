@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let data = {
+        "result": [
+            {
+                "id": 1,
+                "value": 2
+            }, {
+                "id": 2,
+                "value": 34
+            }, {
+                "id": 3,
+                "value": 489
+            }, {
+                "id": 4,
+                "value": 45
+            }, {
+                "id": 5,
+                "value": 12
+            },
+            {
+                "id": 6,
+                "value": 23
+            },
+            {
+                "id": 7,
+                "value": 1
+            },
+            {
+                "id": 8,
+                "value": 100
+            }
+        ]
+    };
+    let aa=[1,5,9,2,0];
+//    aa.sort(function (x,y) {
+//        return y-x
+//    })
+    function upSort(property,isUp) {
+        let isBoolean=isUp?1:-1
+        return function (a,b) {
+            return isBoolean*(a[property]-b[property]);
+        }
+    }
+    console.log(data.result.sort(upSort("value",false)));
+//    aa.sort();//对原数组进行排序
+//    console.log(aa)
+    console.log(data.result)//原json已被排序
+</script>
+</body>
+</html>

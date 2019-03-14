@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [{
+        value: 1,
+        label: 'C'
+    }, {
+        value: 2,
+        label: 'B'
+    }, {
+        value: 3,
+        label: 'CB+B'
+    }]
+    function getValueByKey1(arr, key) {
+        for (let i in arr) {
+            if (arr[i].value === key) {
+                console.log(arr[i].label)
+            }
+        }
+    }
+    getValueByKey1(arr, 1)
+</script>
+<script>
+    var jsonObject1 = {
+        "name": "xiaoming",
+        "age": 29
+    }
+    var keys1 = [];
+    for (var p1 in jsonObject1) {
+        console.log(p1)
+//        if (jsonObject1.hasOwnProperty(p1))
+            keys1.push(p1);
+    }
+    console.log(keys1);
+    console.log((Object.keys(jsonObject1)))
+</script>
+<script>
+    let arr1 = [{
+        value: 1,
+        label: 'C'
+    }, {
+        value: 2,
+        label: 'B'
+    }, {
+        value: 3,
+        label: 'CB+B'
+    }]
+    function getValueByKey(arr,key) {//将下拉菜单根据key值把value取出来
+        for (let i in arr){
+            if(arr[i][Object.keys(arr[0])[0]]===key){
+                return arr[i][Object.keys(arr[0])[1]]
+            }
+        }
+    }
+
+    console.log(getValueByKey(arr1, 3))
+</script>
+</body>
+</html>

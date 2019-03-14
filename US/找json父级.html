@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../js/jquery.js"></script>
+<script>
+    let arrn=[
+        {
+            "MENU_URL": "dashboard",
+            "MENU_ID": "104a580029c54e139210b7e87dca6d85",
+            "MENU_INFO": [],
+            "MENU_NAME": "监控面板"
+        },
+        {
+            "MENU_URL": "systemManage",
+            "MENU_ID": "769130d1918d47219e6f0c463a1c9c67",
+            "MENU_INFO": [],
+            "MENU_NAME": "系统管理"
+        },
+        {
+            "MENU_URL": "serviceManage",
+            "MENU_ID": "8619ca0b6fbc42649a27475e339d5d4a",
+            "MENU_INFO": [
+                {
+                    "MENU_URL": "userInfo",
+                    "MENU_ID": "104a580029c54e139210b7e87dca6d88",
+                    "MENU_INFO": [],
+                    "MENU_NAME": "三户信息"
+                }
+            ],
+            "MENU_NAME": "业务管理"
+        },
+        {
+            "MENU_URL": "serviceManage/recordQuery",
+            "MENU_ID": "d379e3f38cb3472ab18287034f32ef46",
+            "MENU_INFO": [
+                {
+                    "MENU_URL": "dashboard",
+                    "MENU_ID": "104a580029c54e139210b7e87dca6d80",
+                    "MENU_INFO": [
+                        {
+                            "MENU_URL": "dashboard",
+                            "MENU_ID": "104a580029c54e139210b7e87dca6d83",
+                            "MENU_INFO": [],
+                            "MENU_NAME": "监控面板222"
+                        }
+                    ],
+                    "MENU_NAME": "监控面板111"
+                },
+                {
+                    "MENU_URL": "dashboard",
+                    "MENU_ID": "104a580029c54e139210b7e87dca6d89",
+                    "MENU_INFO": [],
+                    "MENU_NAME": "监控面板333"
+                }
+            ],
+            "MENU_NAME": "订购信息查询"
+        }
+    ]
+//递归删除空键值
+        function exec(array) {
+            array.forEach(item => {
+                if (item.MENU_INFO.length === 0) {
+                    delete item.MENU_INFO
+                } else {
+                    exec(item.MENU_INFO)
+                }
+            })
+        }
+
+        exec(arrn);
+
+
+
+    function findParentById(arr,id){//找直接父ID
+        var parentId = '没有父元素',
+            hasParentId = function loop(arr){
+                return arr.some((item)=>{
+                    if(item.MENU_ID === id){
+                        return true
+                    }else if(Array.isArray(item.MENU_INFO)){
+                        parentId = item.MENU_ID
+                        return loop(item.MENU_INFO)
+                    }else{
+                        return false
+                    }
+                })
+            }(arr)
+        return hasParentId ? parentId : '未找到对应父元素'
+    }
+
+    function findParentsById(arr,id){//找对顶层
+        var parentIds = [],
+            index = 0,
+            hasParentId = function loop(arr, index){
+                return arr.some((item)=>{
+                    if(item.MENU_ID === id){
+                        parentIds = parentIds.slice(0, index)
+                        return true
+                    }else if(Array.isArray(item.MENU_INFO)){
+                        parentIds[index] = item.MENU_ID
+                        return loop(item.MENU_INFO, index+1)
+                    }else{
+                        return false
+                    }
+                })
+            }(arr, index)
+        return hasParentId ? parentIds : []
+    }
+    console.log(findParentsById(arrn, '104a580029c54e139210b7e87dca6d83'));
+
+
+    function findTopParent(menuJson, childId) {
+        let menuStr = JSON.stringify(menuJson);
+        let reg = new RegExp('MENU_ID":"([^"]+)"[^\\}\\]]+MENU_ID":"' + childId);
+        return reg.test(menuStr) ? menuStr.match(reg): undefined;
+    }
+
+    console.log(findTopParent(arrn, '104a580029c54e139210b7e87dca6d83'));  //返回8619ca0b6fbc42649a27475e339d5d4a
+//    console.log(findTopParent(arrn, '104a580029c54e139210b7e87dca6d88'));  //返回d379e3f38cb3472ab18287034f32ef46
+</script>
+</body>
+</html>

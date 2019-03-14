@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function age(a) {
+        return a.age > 18
+    }
+    function sex(b) {
+        return b.sex === '男'
+    }
+    function money(c) {
+        return c.money > 500
+    }
+    let arr = [1, 23, 33, 44, 55]
+    let obj = [
+        {sex: '男', age: 13, money: 1200},
+        {sex: '女', age: 19, money: 200},
+        {sex: '男', age: 22, money: 7200},
+        {sex: '女', age: 15, money: 12000},
+    ]
+
+    //    console.log(obj.filter(age).filter(sex).filter(money))
+    let newobj = obj.filter(function (item) {
+        return item.age > 14
+//        if (item.age>19){//这样写也行
+//            return true
+//        }
+    })
+    console.log(newobj)
+
+
+    let list0 = [
+        {name: 'tom', age: 10},
+        {name: 'lee', age: 11},
+        {name: 'rose', age: 12},
+        {name: 'jane', age: 13}
+    ]
+    let info = [
+        {name: 'lee'},
+        {name: 'rose'}
+    ]
+    var res=info.map(function (item) {
+        return item.name
+    })
+    console.log(res)// ["lee", "rose"]
+    let newL = list0.filter(function (val) {
+//        return info[0].name ===val.name
+        return res.indexOf(val.name)>-1
+    })
+    console.log(newL)
+    const newList1 = list0.filter(function (val) {
+            return info.some(
+                function (item) {
+                    return item.name === val.name
+                })
+        }
+    )
+    console.log(newList1)
+    let arrr=[1,2,3,4,5]
+    let arrr0=arrr.map((item)=>{
+        return item+'元'
+    })
+    console.log(arrr0)
+</script>
+</body>
+</html>

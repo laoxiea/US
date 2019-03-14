@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .transition{
+            transition:all 1s
+        }
+    </style>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+<div id="container">
+    <div v-show="show1" class="transition">123123</div>
+    <button @click="aa">按钮</button>
+</div>
+<script>
+    new Vue({
+        el:'#container',
+        data:function () {
+            return {
+                show1:true,
+            }
+        },
+        methods:{
+            aa(){
+                this.show1 =!this.show1
+            }
+        }
+    })
+</script>
+</body>
+</html>

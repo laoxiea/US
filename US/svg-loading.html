@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #d1{
+            position: relative;
+            width: 800px;
+            height:400px;
+            border:1px solid red;
+        }
+        .is-open{
+            display: none;
+        }
+        .loading{
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,.1);
+        }
+        .loading div{
+            position: absolute;
+            z-index: 9999;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .circular{
+            height: 42px;
+            width: 42px;
+            animation: loading-rotate 2s linear infinite;
+        }
+        .path{
+            animation: loading-dash 1.5s ease-in-out infinite;
+            stroke-dasharray: 90,150;
+            stroke-dashoffset: 0;
+            stroke-width: 2;
+            stroke: #409eff;
+            stroke-linecap: round;
+        }
+        @keyframes loading-rotate {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+        @-webkit-keyframes loading-rotate {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+        @-webkit-keyframes loading-dash {
+            0% {
+                stroke-dasharray: 1, 200;
+                stroke-dashoffset: 0
+            }
+            50% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -40px
+            }
+            100% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -120px
+            }
+        }
+
+        @keyframes loading-dash {
+            0% {
+                stroke-dasharray: 1, 200;
+                stroke-dashoffset: 0
+            }
+            50% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -40px
+            }
+            100% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -120px
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+    <div class='loading'>
+        <div>
+            <svg viewBox="25 25 50 50" class="circular">
+                <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+            </svg>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

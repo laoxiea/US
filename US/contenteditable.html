@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div tabindex='1' onkeypress="key()">非input绑定键盘事件</div>
+<div contenteditable="true" id="input1">123123</div>
+<button onclick="conso()">输出</button>
+
+</body>
+<script>
+    function conso() {
+        console.log(input1.innerHTML)
+
+    }
+    function key() {
+        console.log('键盘事件')
+
+    }
+    let arr=[1,2,3,4,5,5,6,7,8,9,9,10]
+    for(let i=0;i<arr.length;i++){
+        for(let j=1;j<arr.length-1;j++){
+            if (arr[i]===arr[j]){
+                arr.splice(j, 1)
+            }
+        }
+    }
+    console.log(arr)
+
+    let arr0=[5,2,3,9,6,1]//冒泡排序
+    for(let i=0;i<arr.length;i++){
+        for(let j=0;j<arr.length-i-1;j++){
+            if (arr0[j]>arr0[j+1]){
+                let temp=arr0[j]
+                arr0[j]=arr0[j+1]
+                arr0[j+1]=temp
+            }
+        }
+    }
+    console.log(arr0)
+</script>
+</html>

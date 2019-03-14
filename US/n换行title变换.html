@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>这是一个div需要\n换行吗'\n'不行</div>
+<script>
+    console.log('<h1>标题</h1>')
+//    document.write('<h1>标题</h1>')
+    document.write('<script src="../js/jquery.js"><\/script>')
+
+</script>
+<script>
+    console.log($)
+    let a=true
+    setInterval(function () {
+        a=!a
+        if (a){
+            document.title = '您有1条新消息'
+        }else{
+            document.title = '小花的个人空间'
+        }
+    },1000)
+</script>
+</body>
+</html>

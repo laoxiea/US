@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #btn {
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<script>
+    let data = [
+        {count: '500', originPrice: 5, discount: 1},
+        {count: '600', originPrice: 6, discount: 2},
+        {count: '700', originPrice: 7, discount: 3}
+    ];
+    let add = [{uid: 11}, {did: 22}, {pid: 33}]
+
+    function addAttr(data, add) {
+        let temp = [];
+        let temp2 = [];
+        for (let i in add) {
+            for (let j in add[i]) {
+                temp[i] = j
+                temp2[i] = add[i][j]
+            }
+        }
+        for (let i in data) {
+            data[i][temp[i]] = temp2[i]
+        }
+        console.log(temp)
+        return data
+    }
+
+    console.log(addAttr(data, add))
+
+    let obj = {name: 'tom', age: 12}
+    for (let i in obj) {
+        console.log(i)
+    }
+</script>
+<script>
+    json1 = {"name1": 'tom1'}
+    json2 = {"name2": 'tom2'}
+    json3 = {"name3": 'tom3'}
+    json4 = {"name4": 'tom4'}
+    function mergeJsonObject(...args) {
+        let resultJsonObject = {};
+
+        function jsonObj(jsonObj) {
+            for (let attr in jsonObj) {
+                resultJsonObject[attr] = jsonObj[attr];
+            }
+        }
+
+        args.forEach(jsonObj)
+//        args.map(jsonObj)
+        return resultJsonObject;
+    }
+    console.log(mergeJsonObject(json1, json2, json3))
+</script>
+<script>
+    json1 = {"name1": 'tom1'}
+    json2 = {"name2": 'tom2'}
+    json3 = {"name3": 'tom3'}
+    json4 = {"name4": 'tom4'}
+    function merge(...jsons) {
+        return jsons.reduce((memo, json) => {
+            return Object.assign(memo, json);
+        }, {});
+    }
+    console.log(merge(json1, json2, json3))
+
+    function mergeJsonObject(...args) {
+        let resultJsonObject = {}
+        args.map(function (val) {
+            Object.assign(resultJsonObject, val)
+        })
+        return resultJsonObject
+    }
+    console.log(mergeJsonObject(json1, json2, json3))
+
+</script>
+<script>
+    let obj1 = [
+        {name: 'tom0', info: {age: 0, add: 'haha0'}},
+        {name: 'tom1', info: {age: 1, add: 'haha1'}},
+        {name: 'tom2', info: {age: 2, add: 'haha2'}}
+    ]
+    function objectMerge(object) {
+        let temp=[]
+        for(let i in object){
+            temp[i]=object[i].info
+            temp[i].name=object[i].name
+        }
+        return temp
+    }
+    console.log(objectMerge(obj1))
+</script>
+<script>
+    function sum(...theArgs) {
+        return theArgs.reduce((previous, current) => {
+            return previous + current;
+        });
+    }
+
+    console.log(sum(1, 2, 3));
+    // expected output: 6
+
+    console.log(sum(1, 2, 3, 4));//10
+
+    function cheng(...theArgs) {
+        return theArgs.reduce((previous, current) => {
+            return previous * current;
+        });
+    }
+
+    console.log(cheng(1, 2, 3, 4));//24
+</script>
+
+</body>
+</html>

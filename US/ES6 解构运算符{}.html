@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let obj = {a: 1, b: 2, c: {name: 'tom'}}
+    let {a: rename, c: {name}} = obj
+    let {d} = obj
+    console.log(rename)
+    console.log(d)
+    console.log(name)
+    let arr = [1, 2, 3, 4, 5]
+    let [, , m, n] = arr
+    console.log(m, n)
+</script>
+<script>
+
+//    increment (context) {
+//        context.commit('increment')
+//    }
+//
+//    increment ({ commit }) {
+//        commit('increment')
+//    }
+    sessionStorage['aa']=121
+    sessionStorage.bb=122
+    sessionStorage.setItem('cc',123)
+</script>
+</body>
+</html>

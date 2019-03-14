@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .fl{
+            float:left;
+        }
+        .fr{
+            float:right;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script>
+    $.ajax({
+        headers: {
+//            'Content-Type': 'application/json; charset=UTF-8' //有头request payload和Form Data
+        },
+        type:'POST',
+        url:'js/test.json',
+        data:{name:'tom'},
+        dataType:'json',
+        success:function (data) {
+            console.log(data.套餐包含)
+            var html=''
+            $.each(data.套餐包含,function(idx,obj){
+                html+='<div style="clear:both"><div class="fl">'+obj.title+'</div>\
+                <div class="fr">'+obj.detail+'</div></div>'
+            })
+            $('#d1').append(html)
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #d1{
+            height:100px;
+            background: #ddf8ff;
+            width: 20%;
+            overflow: auto;
+        }
+        li{
+            border:1px solid red;
+        }
+        a{
+            border:1px solid yellow;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="">111</a></li>
+    <li><a href="">222</a></li>
+</ul>
+<div id="d1" >
+    111
+    <br>1<br>1<br>1<br>1<br>1<br>
+    222
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+    x=10;
+    $(document).ready(function () {
+        $('#d1').scroll(function(){
+            x++
+            if (x>50){
+                x=10
+            }
+            console.log(x)
+        })
+    })
+$('body').css('fontSize',$(window).width()/20+'px')
+$(window).resize(function(){
+    console.log($(window).width(),$(window).height())//获取控制台右上的尺寸
+    $('body').css('fontSize',$(window).width()/20+'px')
+});
+
+
+    (function () {
+        console.log(window.innerWidth,window.innerHeight)
+        console.log(document.body.clientWidth,document.body.clientHeight)
+        console.log(document.documentElement.clientWidth,document.documentElement.clientHeight)
+    })();
+</script>
+</body>
+</html>

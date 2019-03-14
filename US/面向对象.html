@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <style>
+        li {
+            width: 28%;
+            height: 160px;
+            float: left;
+            border: 1px solid #1974A1;
+            margin: 10px;
+            list-style: none;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<ul id="app">
+    <li>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+</ul>
+<ul id="app2">
+
+</ul>
+<body>
+<script>
+//通过原型只能继承共享引用类型，function,arr,obj,date，值类型不能继承，所以要用混合模式，构造函数+原型对象
+//属性放到构造函数，方法放到原型里
+    function Product() {
+        this.name = ''
+        this.price = ''
+        this.discount = ''
+    }
+    Product.prototype = {
+        bindDom: function () {
+            let str = ''
+            str += '<li>\
+            <p>名称：' + this.name + '</p>\
+            <p>原价：' + this.price + '</p>\
+            <p>折扣' + this.discount + '</p>\
+            <p>现价：' + this.price * this.discount + '</p>\
+            </li>'
+            return str
+        },
+        buy: function () {
+            console.log(this)
+        },
+        send: function () {
+
+        }
+    };
+console.log(Product.prototype)
+    let products = [
+        {name: '口红', price: 100, discount: .8, id: 1},
+        {name: '护肤液', price: 200, discount: .7, id: 2},
+        {name: '睫毛膏', price: 300, discount: .9, id: 3}
+    ]
+    let str = '';
+    for (let i = 0; i < products.length; i++) {
+        var product = new Product()
+//        let product = new Product() //closure会在let消失，why?
+        product.name = products[i].name
+        product.price = products[i].price
+        product.discount = products[i].discount
+        product.id = products[i].id
+        console.log(product)
+        str += product.bindDom();
+        app.innerHTML = str
+        console.log(str)
+//        (function (n) {
+            document.getElementsByTagName('li')[i].onclick = function () {
+                console.log(1)
+                product.buy()
+            }
+//        })(i)
+    }
+
+</script>
+<!--<script>-->
+<!--function Product1(name, price, discount) {-->
+<!--this.name = name-->
+<!--this.price = price-->
+<!--this.discount = discount-->
+<!--}-->
+<!--Product.prototype = {-->
+<!--bindDom: function () {-->
+
+<!--}-->
+<!--};-->
+<!--let product1 = new Product1('口红', 100, .8)-->
+<!--let product2 = new Product1('护肤液', 200, .7)-->
+<!--let product3 = new Product1('睫毛膏', 300, .9)-->
+
+<!--let products1 = [product1, product2, product3]-->
+<!--console.log(products1)-->
+<!--let str1 = '';-->
+<!--for (let i = 0; i < products1.length; i++) {-->
+<!--str1 += '<li>\-->
+<!--<p>名称：' + products1[i].name + '</p>\-->
+<!--<p>原价：' + products1[i].price + '</p>\-->
+<!--<p>折扣' + products1[i].discount + '</p>\-->
+<!--<p>现价：' + products1[i].price * products1[i].discount + '</p>\-->
+<!--</li>'-->
+<!--}-->
+<!--app2.innerHTML = str1-->
+
+<!--</script>-->
+<script>
+    class Person{
+        constructor(name,age){
+            this.name=name
+            this.age=age
+        }
+        sayHi(){
+            console.log(this.name+': HI MLGB')
+        }
+    }
+    let tom= new Person('tom',18)
+    tom.sayHi()
+</script>
+<script>
+    function Stu(name) {
+        this.name=name
+        this.say =function () {
+            console.log(this.name+' hi')//在构造函数里添加方法浪费内存，会在每一个实例都存一个方法，
+            // 在prototype里添加只会存一份
+        }
+    }
+    let aaa=new Stu('aaa')
+    let bbb=new Stu('bbb')
+    aaa.say()
+    bbb.say()
+</script>
+</body>
+</html>

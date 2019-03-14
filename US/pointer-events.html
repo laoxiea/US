@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .disable {
+            pointer-events: none;
+        }
+        .able{
+            pointer-events:auto
+        }
+
+        div, span {
+            width: 100px;
+            height: 30px;
+            background: #eee;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        section{
+            width: 300px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        span:hover{
+            background: #dbdbdb;
+        }
+        div:hover {
+            background: #eeb8bc;
+        }
+    </style>
+</head>
+<body>
+<div onclick="aa()" id="d1">点我弹框</div>
+<section>
+    <span onclick="a()">禁用</span>
+    <span onclick="b()">恢复</span>
+</section>
+<script>
+    const d1 = document.getElementById('d1')
+    function aa() {
+        alert('123')
+    }
+    function a() {
+        d1.className = 'disable'
+    }
+    function b() {
+        d1.className = 'able'
+    }
+</script>
+</body>
+</html>

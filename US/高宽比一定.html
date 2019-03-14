@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #d1{
+            width:100%;
+            height:0;
+            padding-bottom:40%;
+            overflow: hidden;
+            background: #eee;
+        }
+        #d2{
+            width: 100%;
+            height:20vw;
+            background: #c4c4c4;
+        }
+        #d3{
+            display: flex;
+        }
+        #d3 div{
+            /*flex: 1;*/
+            text-align: center;
+            height: 50px;
+            line-height:50px;
+        }
+        #d3 div:nth-child(1){
+            flex: 1;
+            background: #eee;
+        }
+        #d3 div:nth-child(2){
+            flex: 2;
+            background: #ee92a5;
+        }
+        #d3 div:nth-child(3){
+            flex: 1;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+    <h4>title</h4>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, aliquam consequuntur corporis, distinctio est, hic maiores mollitia nesciunt nobis numquam officia pariatur quam quas sit tempora unde velit vero voluptate?
+</div>
+<div id="d2">
+</div>
+<div id="d3">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+</body>
+</html>

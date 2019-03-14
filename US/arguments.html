@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function a(a,b) {
+        console.log(arguments.length)//3
+    }
+    a(1,2,3)
+    function b(a,b,c) {
+        console.log(arguments.length)//2
+    }
+    b(1,2)
+</script>
+<script>
+    console.log(['a',,'c'].length)//3
+    console.log(1 in ['a',,'c'])
+</script>
+<script>
+    let arr=new Array(5)
+    arr[10]=1
+    console.log(arr)
+</script>
+</body>
+</html>

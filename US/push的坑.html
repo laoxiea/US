@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [
+        {name: 'tom1', isSelect: true, id: 1,arr:[1]},
+        {name: 'tom2', isSelect: true, id: 1,arr:[1]},
+        {name: 'tom3', isSelect: false, id: 1,arr:[1]},
+        {name: 'tom4', isSelect: false, id: 1,arr:[1]},
+        {name: 'tom5', isSelect: true, id: 1,arr:[1]},
+        {name: 'tom6', isSelect: false, id: 1,arr:[1]},
+        {name: 'tom7', isSelect: true, id: 1,arr:[1]}
+    ]
+    let getVal=arr.map((item)=>{
+        return item.name
+    })
+    console.log(getVal)
+    let result=arr[3].arr.push(2)
+    console.log(result)
+
+    arr[3].arr.push(2)
+    let result1=arr[3].arr
+    console.log(result1)
+</script>
+</body>
+</html>

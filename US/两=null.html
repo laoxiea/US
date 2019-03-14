@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+     * jquery就用了这个技巧
+     * */
+    let obj = {a: 1, b: 2}
+    if (obj.c == null) {
+        console.log('进来了')
+    }
+    //等价于
+    if (obj.c === null || obj.c === undefined) {
+        console.log('进来了')
+    }
+</script>
+</body>
+</html>

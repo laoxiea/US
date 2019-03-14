@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let obj = [
+        {
+            id: 1,
+            children: [
+                {
+                    id: 11,
+                    children: [
+                        {
+                            id: 111,
+                            children: []
+                        }
+                    ]
+                },
+                {
+                    id: 12,
+                    children: []
+                }
+            ]
+        },
+        {
+            id: 2,
+            children: []
+        }
+    ]
+
+    let list = []
+    function digui(obj) {
+        for (let i = 0; i < obj.length; i++) {
+            if (obj[i].children.length===0) {
+                delete obj[i].children
+            } else {
+                digui(obj[i].children)
+            }
+        }
+    }
+    digui(obj)
+    console.log(obj)
+    function func() {
+        console.log(arguments.callee)//返回函数本身
+    }
+    func()
+
+    let obj1={name:'tom'}
+    let obj2={age:12}
+    let result=Object.assign({},obj, obj1, obj2)
+    console.log(result)
+
+    function jiecheng(num) {
+        if (num<=1){
+            return num
+        }else{
+            return num*jiecheng(num-1)
+        }
+    }
+    console.log(jiecheng(4))
+
+    function jiejia(num) {
+        if (num<=1){
+            return num
+        }else{
+            return num+jiejia(num-1)
+        }
+    }
+    console.log(jiejia(4))
+</script>
+</body>
+</html>

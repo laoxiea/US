@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var b=10
+    function bb() {
+        console.log(b)//undefined
+        var b=5 //有var才会被声明提前，没有不会
+        console.log(b)//5
+    }
+    bb()
+
+    let a=10
+    function aa() {
+        console.log(a)
+        let a=5    //报错，let不会被声明提前，发现局部有变量a，就不会去全局找a，但没有提前，所有报错
+    }
+    aa()
+</script>
+</body>
+</html>

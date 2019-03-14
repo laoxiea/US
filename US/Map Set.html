@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log(Array.from(new Set([1, 2, 3, 4, 5, 5, 5, 6, 7, 7, 8])))
+    let map = new Map()
+    map.set('key1', 1)
+    map.set('key2', 2)
+    console.log(map.size)
+    console.log(map)
+    console.log(map.get('key1'))
+    console.log(map.has('key1'))
+
+    console.log(Array.from(map))
+    let set = new Set()
+    set.add(1)
+    set.add([2, 3])
+    set.add({name: 'tom'})
+    console.log(set.size)
+    console.log(set)
+</script>
+<script>
+    let a = 100
+    function xxx() {
+        let a = 200
+        console.log(a)
+    }
+    xxx()
+    console.log(a)
+
+//    yy()
+//    let yy = function () {
+//        console.log('yy')
+//    }
+
+    console.log(leta)
+    let leta=100//不会声明提前，会报错
+
+    console.log(varb)//声明提前   undefined
+    var varb=100
+</script>
+</body>
+</html>
