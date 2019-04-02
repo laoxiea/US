@@ -15,5 +15,23 @@
     console.log(newObj)//{name: "lili",age: {num: 20}}
         //只拷贝了最外的一层
 </script>
+<script>
+    let obj1={a:1,b:20}
+    let obj2={b:10,c:30}
+    let obj3={...obj1}
+    console.log(obj3)
+    let newObj1=Object.assign({},obj1,obj2)
+    console.log(newObj1)
+</script>
+<script>
+    let arr1=[1,2,3,4]
+    let arr2=[7,8,9,10]
+    console.log([...arr1])
+    let arr3=JSON.parse(JSON.stringify(arr1))
+    arr3[2]=0
+    console.log(arr3)
+    let newArr=Object.assign([],arr1)
+    console.log(newArr)
+</script>
 </body>
 </html>

@@ -50,6 +50,13 @@
     }).catch((e)=>{
         console.log(e)
     })
+    let newAsync=async ()=>{
+        return new Promise((resolve,reject)=>{
+            resolve('666')
+        })
+    }
+    newAsync().then((e)=>{console.log(e)})
+
 </script>
 
 </body>

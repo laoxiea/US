@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            box-sizing: border-box;
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    let obj1={a:1,b:20}
+    let obj2={b:10,c:30}
+    let newObj=Object.assign({},obj1,obj2)
+    console.log(newObj)
+</script>
+<script>
+    let a = {
+        "head":
+            {
+                "status":
+                    0
+            },
+        "body":
+            {
+                "attitude":
+                    [{"tag_id": 1, "tag_name": "\u6001\u5ea6\u4e0d\u597d"}, {
+                        "tag_id": 2,
+                        "tag_name": "\u73af\u5883\u5608\u6742"
+                    }, {"tag_id": 3, "tag_name": "\u8bfe\u5802\u95f2\u804a"}],
+                "behavior":
+                    [{"tag_id": 1, "tag_name": "\u6001\u5ea6\u4e0d\u597d"}, {
+                        "tag_id": 2,
+                        "tag_name": "\u73af\u5883\u5608\u6742"
+                    }, {"tag_id": 3, "tag_name": "\u8bfe\u5802\u95f2\u804a"}],
+                "process":
+                    [{"tag_id": 1, "tag_name": "\u6001\u5ea6\u4e0d\u597d"}, {
+                        "tag_id": 2,
+                        "tag_name": "\u73af\u5883\u5608\u6742"
+                    }, {"tag_id": 3, "tag_name": "\u8bfe\u5802\u95f2\u804a"}]
+            }
+    }
+</script>
+</body>
+</html>

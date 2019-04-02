@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .scale-click::after{
+            content:"";
+            position:absolute;
+            top:-10px;
+            left:-10px;
+            bottom:-10px;
+            right:-10px;
+        }
+        .a{
+            position: relative;
+        }
+        #d1{
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">1</div>
+<span class="a scale-click" onclick="d1.innerHTML++">呵呵呵</span>
+<script>
+    localStorage.setItem('a',3333) || console.log(22) || console.log(333)
+</script>
+<script>
+    let arr=[true,true,true,true,true,true,true,true,true]
+    arr.forEach((item,idx)=>{
+            item = false
+    })
+    console.log(arr)
+    arr1=[[1,2,3],[2,3,4]]
+    arr1.forEach(item =>{
+        item.push(9)
+    })
+    console.log(arr1)
+</script>
+</body>
+</html>
