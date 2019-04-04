@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * includes和indexOf几乎一样，只是更直观了，不用判断>-1，返回布尔值
+    * */
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    console.log(arr.includes(2))//true
+    let str = 'hello world!'
+    console.log(str.includes('w'))//true
+    console.log(str.indexOf('w'))//6
+    console.log(str.startsWith('e'))//false
+    console.log(str.endsWith('!'))//true
+</script>
+</body>
+</html>

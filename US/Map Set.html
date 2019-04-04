@@ -25,23 +25,58 @@
 </script>
 <script>
     let a = 100
+
     function xxx() {
         let a = 200
         console.log(a)
     }
+
     xxx()
     console.log(a)
 
-//    yy()
-//    let yy = function () {
-//        console.log('yy')
-//    }
+    //    yy()
+    //    let yy = function () {
+    //        console.log('yy')
+    //    }
 
-    console.log(leta)
-    let leta=100//不会声明提前，会报错
+    /*console.log(leta)*/
+    let leta = 100//不会声明提前，会报错
 
     console.log(varb)//声明提前   undefined
-    var varb=100
+    var varb = 100
+</script>
+<script>
+    let arrList = [1, 1, 2, 3, 5, 6, 6, 6, 7]
+    console.log([...new Set(arrList)])
+    let newMap = new Map([['name', 'tom'], ['age', 18], ['sex', 'male'], ['address-title', 'beijing']])
+    console.log(newMap)
+    console.log(newMap.get('age'))
+    newMap.set('son', 'pig')
+    let obj = {name: 'ergou', age: 18}
+    console.log(1111, Object.keys(obj))//key的数组
+    /*for(let v of obj){ */         //普通对象不能使用for of 遍历 ，但可以使用for in 遍历   forEach是iterable内置的方法
+    /*    console.log(v)*/
+    /*}*/
+    for (let v of newMap) {
+        console.log('for of\n', v)
+    }
+
+    newMap.forEach((item, index) => {
+        console.log('forEach\n', index, '\n', item)
+    })
+    /*
+    * Array  Map   Set 是ES6的新类型interable
+    *
+    * */
+    let changeMap = new Map()
+    for (let key in obj) {
+        console.log(obj.key)//undefined
+        console.log(obj[key])
+        changeMap.set(key, obj[key])
+    }
+    console.log(changeMap)
+    let newSet = new Set(['name', 1, 4, 'age'])
+    console.log(newSet)
 </script>
 </body>
 </html>

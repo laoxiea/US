@@ -57,6 +57,20 @@
     }
     newAsync().then((e)=>{console.log(e)})
 
+    function imgLoad(){
+        return new Promise(function (resolve,reject) {
+            resolve(66)
+        })
+    }
+    async function asyncFun() {
+        return await imgLoad()
+    }
+    asyncFun().then((res)=>{
+        console.log(res)
+    })
+    let arr = [[0, 1], [2, 3], [4, 5]]
+
+    console.log(arr.join('-'))
 </script>
 
 </body>

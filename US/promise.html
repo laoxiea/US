@@ -46,6 +46,21 @@
         .catch(function (reason) {
         console.log('catch:', reason);
     });
+    function loadImg(data) {
+        return new Promise(function (resolve,reject) {
+            resolve(data)
+        })
+    }
+     let loadImg1=loadImg(111)
+     let loadImg2=loadImg(222)
+    loadImg1.then(()=>{
+        console.log(1)
+        return loadImg2
+    }).then(()=>{
+        console.log(2)
+    }).catch((e)=>{
+        console.log(e)
+    })
 </script>
 </body>
 </html>
