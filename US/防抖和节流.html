@@ -24,17 +24,7 @@
     //         console.log(2)
     //     }
     // }
-    function haha() {
-        var timer = null;
-        return function () {
-            if (timer) {
-                clearTimeout(timer);
-            }
-            timer = setTimeout(() => {
-                console.log('防抖',123)
-            }, 500)
-        }
-    }
+
 
     var timeout = null;
 
@@ -50,11 +40,21 @@
     function dd() {
         console.log('达到')
     }
-
+    function haha() {
+        var timer = null;
+        return function () {
+            if (timer) {
+                clearTimeout(timer);
+            }
+            timer = setTimeout(() => {
+                console.log('防抖',123)
+            }, 500)
+        }
+    }
 
     // 滚动事件
     // window.addEventListener('scroll', debounce);
-    window.addEventListener('scroll', haha());
+    // window.addEventListener('scroll', haha());
 
     btn.onclick = haha()
 
@@ -66,6 +66,19 @@
     }
 
     test()()
+
+    function save3(){
+        //首先设定一个变量，在没有执行我们的定时器时为null
+        let timer = null;
+        return function(){
+            //当我们发现这个定时器存在时，则表示定时器已经在运行中，需要返回
+            if(timer) return;
+            timer = setTimeout(()=>{
+                console.log('节流3')
+                timer = null;
+            },100);
+        }
+    }
 
 
     let canRun = true;
@@ -91,7 +104,9 @@
         }
     }
 
-    window.addEventListener('scroll', save2());
+
+
+    window.addEventListener('scroll', save3());
 
 </script>
 </body>
