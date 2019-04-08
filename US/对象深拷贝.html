@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let newObj = {}
+
+    function deepClone(obj) {
+        console.log(Object.keys(obj))
+        if (Object.keys(obj).length) {
+            Object.keys(obj).forEach((item) => {
+                newObj[item] = obj[item]
+            })
+        }
+    }
+
+    let obj = {
+        name: 'tom', address: {
+            age: 10
+        }
+    }
+    deepClone(obj)
+    console.log(newObj)
+</script>
+</body>
+</html>

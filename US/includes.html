@@ -16,6 +16,15 @@
     console.log(str.indexOf('w'))//6
     console.log(str.startsWith('e'))//false
     console.log(str.endsWith('!'))//true
+    let obj=[
+        {name:'tom',age:18},
+        {name:'lili',age:19},
+        {name:'lucy',age:20}
+    ]
+    let result=obj.find((item)=>{
+        return item.age>18
+    })
+    console.log(result)//{name: "lili", age: 19}     find找到一个即返回
 </script>
 </body>
 </html>

@@ -5,15 +5,20 @@
     <title>Title</title>
 </head>
 <body>
+<div></div>
+<div></div>
+<div></div>
 <script>
+    console.log([...document.getElementsByTagName('div')])
     console.log(Array(5).fill(3))//[3, 3, 3, 3, 3]
     let likeArray={
         0:'tom',
         1:'lucy',
         2:'lili',
-        3:'lili',
+        3:'lili1',
         length:4  //类数组必须要有length属性
     }
+    //console.log([...likeArray])//Array ES6新特性.html?_ijt=ckvj9hbd7fng8ekpvt948coqi4:21 Uncaught TypeError: likeArray is not iterable
     console.log(Array.prototype.slice.call(likeArray))
     console.log(Array.from(likeArray)) //["tom", "lucy", "lili", "lili"]
 
@@ -21,6 +26,10 @@
     let arr=[1,2,3,4,5,3,2]
     let newSet=new Set(arr)
     console.log(Array.from(newSet))
+    function aa() {
+        console.log(arguments)
+    }
+    aa(1,2,3)
 </script>
 </body>
 </html>

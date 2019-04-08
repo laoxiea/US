@@ -78,5 +78,23 @@
     const newList2 = listAll.filter(val => info.some(item => item.name === val.name))
     console.log(newList1)
 </script>
+<script>
+    let listTotal = [
+        {name: 'tom', age: 10},
+        {name: 'lee', age: 11},
+        {name: 'rose', age: 12},
+        {name: 'jane', age: 13}
+    ]
+    let result=listTotal.map((item)=>{
+        return {
+            name:item.name,
+            age:item.age,
+            sex:'male'
+        }
+    }).filter((item)=>{
+        return item.age>11
+    })
+    console.log(result)
+</script>
 </body>
 </html>
