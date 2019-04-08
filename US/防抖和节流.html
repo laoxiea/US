@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="input"/>
+<button id="btn">防抖</button>
+<script>
+    // var timer = setInterval(dd, 1000)
+    // document.getElementById('btn').onclick = function () {
+    //     if (timer != null) {
+    //         clearInterval(timer);
+    //         timer = null;
+    //         console.log(1)
+    //     } else {
+    //         timer = setInterval(dd, 1000)
+    //         console.log(2)
+    //     }
+    // }
+    function haha() {
+        var timer = null;
+        return function () {
+            if (timer) {
+                clearTimeout(timer);
+            }
+            timer = setTimeout(() => {
+                console.log('防抖',123)
+            }, 500)
+        }
+    }
+
+    var timeout = null;
+
+    function debounce() {
+        if (timeout) {
+            clearTimeout(timeout);
+        }
+        timeout = setTimeout(function () {
+            console.log('防抖',666);
+        }, 1000);
+    }
+
+    function dd() {
+        console.log('达到')
+    }
+
+
+    // 滚动事件
+    // window.addEventListener('scroll', debounce);
+    window.addEventListener('scroll', haha());
+
+    btn.onclick = haha()
+
+    function test() {
+        var a = 10;
+        return function () {
+            console.log('a=', a)
+        }
+    }
+
+    test()()
+
+
+    let canRun = true;
+
+    function save() {
+        if (!canRun) return
+        canRun = false
+        setTimeout(() => {
+            console.log('节流1')
+            canRun = true
+        }, 100)
+    }
+
+    function save2(){
+        let canRun=true;//闭包
+        return function () {
+            if (!canRun) return
+            canRun=false
+            setTimeout(() => {
+                console.log('节流2')
+                canRun = true
+            }, 100)
+        }
+    }
+
+    window.addEventListener('scroll', save2());
+
+</script>
+</body>
+</html>
