@@ -72,6 +72,45 @@
 
     console.log(arr.join('-'))
 </script>
+<script>
+    function syncFun(){
+        return '同步函数'
+    }
+    function asyncFun(){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve('异步函数')
+            },1000)
+        })
+    }
 
+    async function test(a){
+        console.log(a)
+    }
+    let testRes=test(1)
+    console.log(testRes)//resolved状态的promise
+
+    async function test1() {
+        let a=await 123
+        let b=await syncFun()
+        let c=await asyncFun()
+        return a//b//cc
+    }
+    test1().then((e)=>{console.log(e)})//123//同步函数//异步函数
+    
+    let testRes1=test1()
+    testRes1.then((e)=>{console.log(e)})//123//同步函数//异步函数
+
+/*
+* 33 a
+* 34 d
+* 35 a
+  36 c
+* 37 c
+* 38 d? c
+* 39 a
+* 40 a?
+* */
+</script>
 </body>
 </html>

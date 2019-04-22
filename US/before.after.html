@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*.container {*/
+            /*width: 500px;*/
+            /*display: flex;*/
+            /*justify-content: space-around;*/
+        /*}*/
+
+        .item {
+            line-height: 1em;
+            position: relative;
+            display: inline-block;
+            font-size: 24px;
+        }
+
+        .icon {
+            line-height: 1;
+            margin-left: .5em;
+            font-size: 75%;
+            vertical-align: super;
+            position: absolute;
+            margin-top: -.2em;
+            white-space: nowrap;
+            display: inline-block;
+            width: 0;
+        }
+
+        .icon::after {
+            content: '!';
+            width: 1em;
+            text-align: center;
+            background: red;
+            color: #fff;
+            border-radius: .5em;
+            display: inline-block;
+        }
+
+        .icon::before {
+            content: attr(data-num);
+            background: blue;
+            color: #fff;
+            border-radius: .5em;
+            white-space: nowrap;
+            display: inline-block;
+            padding: 0 .5em;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <div class="item">已标记</div>
+        <div class="icon" data-num="66"></div>
+    </div>
+    <div>
+        <div class="item">已标记1</div>
+        <div class="icon" data-num="36"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 5, 3, 2, 4]
+    const reselt = arr.reduce((pre, current) => pre + current,0)  //原始值
+    console.log(reselt)
+    const reselt2 = arr.reduce((pre, current, index, arr) => {
+        console.log(pre, current,index,arr)
+        return pre+current
+    })
+    console.log(reselt2)
+
+    /*
+    如果没有提供initialValue，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。如果提供initialValue，从索引0开始。
+    * */
+    
+    /*
+    * 对象里的属性求和
+    * */
+    let obj=[
+        {name:'a',price:12},
+        {name:'b',price:14},
+        {name:'c',price:15},
+        {name:'d',price:17},
+    ]
+    const total=obj.reduce((pre,cur)=>pre+cur.price,0)
+    console.log(total)
+</script>
+</body>
+</html>

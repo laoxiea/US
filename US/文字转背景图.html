@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        /** {*/
+        /*font-family: fantasy;*/
+        /*font-size: 1.8em;*/
+        /*}*/
+
+        div {
+            height: 100px;
+            width: 100px;
+            background: url(data:image/png;base64,JUU5JThFJUFDJUVFJTgxJTg3JUU3JTk5JTgxJUU5JThEJTlDJUU2JUEwJUE3JUU2JTlBJThC) no-repeat;
+            background-origin: border-box;
+            /*-webkit-background-clip: text;*/
+            /*-webkit-text-fill-color: transparent;*/
+
+        }
+
+        #img {
+            width: 600px;
+            height: 400px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+<div>高高高</div>
+<div id="img"></div>
+<script>
+    var base64 = {
+        encode(str) {
+            // 对字符串进行编码
+            var encode = encodeURI(str);
+            // 对编码的字符串转化base64
+            var base64 = btoa(encode);
+            return base64;
+        },
+        decode(base64) {
+            // 对base64转编码
+            var decode = atob(base64);
+            // 编码转字符串
+            var str = decodeURI(decode);
+            return str;
+        }
+    };
+    // 字符串转base64
+    console.log(base64.encode('怪诞咖啡'));//JUU2JTgwJUFBJUU4JUFGJTlFJUU1JTkyJTk2JUU1JTk1JUEx
+    // base64转字符串
+    console.log(base64.decode(base64.encode('怪诞咖啡')));//怪诞咖啡
+
+    /*
+    * 绘制高清晰度HTML canvas适配不同移动设备，将文字转换成图片并自动换行（解决中英文混杂文字情况）
+    * */
+
+    // var canvas = document.createElement("canvas");
+    // canvas.width = 414;
+    // var ctx = canvas.getContext("2d");
+    // ctx.font = "30px Arial";
+    // ctx.fillText("Low DPI Text", 10, 40);
+    // document.body.appendChild(canvas);
+
+    var HiDPIcanvas = document.createElement("canvas");
+    // HiDPIcanvas.width = 414 * window.devicePixelRatio;
+    // HiDPIcanvas.style.width = 414;
+    var HiDPIctx = HiDPIcanvas.getContext("2d");
+    // HiDPIctx.scale(window.devicePixelRatio,window.devicePixelRatio);
+    HiDPIctx.font = "30px Arial";
+    HiDPIctx.transform(1, Math.PI / 6, -Math.PI / 6, 1, 30, 10);
+    HiDPIctx.fillStyle = "blue";
+    HiDPIctx.fillText("1381238947", 10, 40);
+    document.body.appendChild(HiDPIcanvas);
+    let base64Data = HiDPIcanvas.toDataURL("image/png", 0.92);
+    console.log(base64Data)
+    img.style.background = '#eee url(' + base64Data + ') left center'
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = false
+    let b = true
+    let c = true
+    let name = 'tom'
+    let age = ''
+    let email = 163
+
+    if (!(!name || !age || !email)) {
+        console.log('或，不能为空');
+    }
+    if (name && age && email) {
+        console.log('与，不能为空');
+    }
+    console.log(!(!true || !false), !(!true || !true) , !(!false || !false))
+    console.log(true && false     , true && true      , false && false)
+</script>
+</body>
+</html>
