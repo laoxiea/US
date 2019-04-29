@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let boolean=!true
+    let arr=['one','two','three']
+    let objName=boolean?arr[0]:arr[2]
+    
+    let obj={[objName]:boolean?0:3}  //ES6支持key为变量或表达式
+    let obj2={[!boolean?arr[0]:arr[2]]:(!boolean?0:3)}
+    console.log(obj,obj2)
+
+    let fnName='fn'
+    let classObj={
+        [fnName](){
+            console.log(arguments.callee)//返回自己
+        }
+    }
+    classObj[fnName]()
+    console.log(classObj)
+
+    let list={name:'tom',age:18,sex:'male'}
+    function fn({name,age}) {
+        console.log(name, age)
+    }
+    fn(list)
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1]
+
+    function f(arr) {
+        let n = 0
+
+        for (let i = 0; i < arr.length - 1; i++) {
+            if (arr[i] === 0) {
+                if (i === 0 && arr[1] === 0) {
+                    n++
+                } else if (arr[i - 1] === 0 && arr[i + 1] === 0) {
+                    n++
+                    i++
+                }
+            }
+        }
+        console.log(n)
+    }
+
+    f(arr)
+
+    let str = "Let's go to school"
+
+    function reverseFn(str) {
+        return str.split(' ').map((item) => {
+            return item.split('').reverse().join('')
+        }).join(' ')
+    }
+
+    console.log(reverseFn(str))
+
+
+    let aaa = (arr) => {
+        // 对这副牌进行排序，升序、降序都可以
+        arr.sort((a, b) => a - b)
+        let min = Number.MAX_SAFE_INTEGER
+        let dst = []
+        let result = true
+        for (let i = 0, len = arr.length, tmp = []; i < len; i++) {
+            tmp.push(arr[i])
+            for (let j = i + 1; j < len - 1; j++) {
+                if (arr[i] === arr[j]) {
+                    tmp.push(arr[j])
+                } else {
+                    if (min > tmp.length) {
+                        min = tmp.length
+                    }
+                    dst.push([].concat(tmp))
+                    tmp.length = 0
+                    i = j
+                    break
+                }
+            }
+        }
+        dst.every(item => {
+            if (item.length % min !== 0) {
+                result = false
+                return false
+            }
+        })
+        return result
+    }
+    console.log(aaa([1,1,2,2,2]))
+
+/*
+*
+* 数组是引用类型
+* */
+    let tmp=[];
+    let tmp1=[];
+    let arr1=[1]
+    for(let i=0;i<5;i++){
+        arr1[1]=i
+        tmp.push(arr1)
+        tmp1.push([...arr1])
+    }
+    console.log(tmp,tmp1)
+
+
+    try{
+        arr.forEach(function(oo,index){
+            if(index == 2){
+                throw index;
+            }
+            console.log(oo);
+        });
+    }catch(e){
+        console.log(e)
+    }
+
+    
+</script>
+</body>
+</html>
