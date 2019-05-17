@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    window.onerror = function (e) {
+        console.log(1, e)
+
+        return true// 函数中返回 return true，错误便不会暴露到控制台中
+    }
+    try {
+        throw new Error('123')
+
+    }catch (e) {
+        console.log(e)
+    }
+    throw new Error('aaa')
+
+</script>
+</body>
+</html>
