@@ -32,6 +32,10 @@
     console.log(arr3)
     let newArr=Object.assign([],arr1)
     console.log(newArr)
+    let arr4=[...arr2]//浅拷贝
+    arr2[2]=122
+    console.log(arr2,arr4)
+    console.log(arr1.fill(false))
 </script>
 </body>
 </html>

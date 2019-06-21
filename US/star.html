@@ -33,10 +33,16 @@
     canvas.width = WIDTH
     canvas.height = HEIGHT
     let x = WIDTH / len
-    let y = HEIGHT / 2 / Math.max(max, min)
+    let y = (HEIGHT - 30) / 2 / Math.max(max, min)//30为距离Y边界的距离
     let ctx = canvas.getContext("2d");
-    ctx.strokeStyle = '#4BF3A7'
+    ctx.strokeStyle = '#f33d25'
+    ctx.lineWidth = 20;
+    ctx.moveTo(0, 200)
+    ctx.lineTo(WIDTH, 200);
+    ctx.stroke();
     ctx.lineWidth = .8;
+    ctx.moveTo(0, 0)
+    ctx.strokeStyle = '#4BF3A7'
     // for(let i=0;i<arr.length;i++){
     //     ctx.lineTo(x*i,-(y*arr[i]-200));
     // }
@@ -74,12 +80,14 @@
 </style>
 <div id="container">
     <ul>
-        <li v-for='(list,idx) in stars' :key="idx" @click="starClick(idx)" :class="['starClass',list?'active':'normal']">
+        <li v-for='(list,idx) in stars' :key="idx" @click="starClick(idx)"
+            :class="['starClass',list?'active':'normal']">
             {{list}}
         </li>
     </ul>
 </div>
 <script>
+
     new Vue({
         el: '#container',
         data() {
@@ -87,10 +95,13 @@
                 stars: [false, false, false, false, false]
             }
         },
+        mounted() {
+            console.log(this.stars.join(' '))
+        },
         methods: {
-            starClick(idx){
-                this.stars=this.stars.map((item,index)=>{
-                     return index<idx+1
+            starClick(idx) {
+                this.stars = this.stars.map((item, index) => {
+                    return index < idx + 1
                 })
             }
             // overStar(idx) {

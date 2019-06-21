@@ -96,10 +96,10 @@
         let c=await asyncFun()
         return a//b//cc
     }
-    test1().then((e)=>{console.log(e)})//123//同步函数//异步函数
+    test1().then((e)=>{console.log(1,e)})//123//同步函数//异步函数
     
     let testRes1=test1()
-    testRes1.then((e)=>{console.log(e)})//123//同步函数//异步函数
+    testRes1.then((e)=>{console.log(2,e)})//123//同步函数//异步函数
 
 /*
 * 33 a
@@ -111,6 +111,19 @@
 * 39 a
 * 40 a?
 * */
+</script>
+
+
+<script>
+    async function f1() {
+        let res= await setTimeout(()=>{
+            return '发斯蒂芬斯蒂芬佛挡杀佛'
+        },3000)
+        return res
+    }
+    f1().then((e)=>{
+        console.log(e)
+    })
 </script>
 </body>
 </html>

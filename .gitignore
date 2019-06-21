@@ -4,6 +4,7 @@ dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+公司服务器
 
 # Editor directories and files
 .idea
