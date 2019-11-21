@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .justify {
+            color: #999;
+            height: 38px;
+            line-height: 38px;
+            text-align: justify;
+            border: 1px solid blue;
+        }
+
+        .justify > span {
+            display: inline-block;
+            padding-left: 100%;
+        }
+
+        .parent {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background: #555;
+        }
+        .parent .child {
+            width: 600px;
+            /*flex-shrink:0;*/
+            height: 0;
+            padding-top: 75%;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+<!--<p class="justify">订单状态<span></span></p>-->
+
+<div class="parent">
+    <div class="child">123</div>
+</div>
+</body>
+</html>
