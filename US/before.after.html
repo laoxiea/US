@@ -40,7 +40,7 @@
         }
 
         .icon::before {
-            content: attr(data-num);
+            content: attr(tip);
             background: blue;
             color: #fff;
             border-radius: .5em;
@@ -54,11 +54,11 @@
 <div class="container">
     <div>
         <div class="item">已标记</div>
-        <div class="icon" data-num="66"></div>
+        <div class="icon" data-num="66" tip="33"></div>
     </div>
     <div>
         <div class="item">已标记1</div>
-        <div class="icon" data-num="36"></div>
+        <div class="icon" data-num="36" tip="66"></div>
     </div>
 </div>
 </body>

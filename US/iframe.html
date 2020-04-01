@@ -9,4 +9,12 @@
 <iframe src="http://super.wo.cn/report" frameborder="0" width="1000" height="600" scrolling="yes">111</iframe>
 <iframe src="./高宽比一定.html" frameborder="0" width="1000" height="600" scrolling="yes">111</iframe>
 </body>
+<script>
+    function htmlEncode ( str ) {
+        var ele = document.createElement('span');
+        ele.appendChild( document.createTextNode( str ) );
+        return ele.innerHTML;
+    }
+    console.log(htmlEncode('<s>24234</s>'))
+</script>
 </html>

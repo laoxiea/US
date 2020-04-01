@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<input
+        accept="image/*"
+        type="file"
+        id="chooseImage"
+/>
+<img id="showImg" src="">
+
+
+<script>
+    //http://android.chrome.hk.cn/   https://www.firefox.com.cn/mobile/
+    $('#chooseImage').on('change',function(e){
+        // 检查是否是图片
+        var filePath = $(this).val(),
+            fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase();//获取文件后缀名
+        //检查后缀名
+        if( !fileFormat.match(/.png|.jpg|.jpeg/) ) {
+            console.log('文件格式必须为：png/jpg/jpeg');//showError是另外写的一个显示错误信息的function
+            return;
+        }
+
+        //获取并记录图片的base64编码
+        var reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]); // 读出 base64
+        reader.onloadend = function () {
+            console.log(reader)
+            // 图片的 base64 格式, 可以直接当成 img 的 src 属性值
+            var dataURL = reader.result;//base64
+            // 显示图片
+            $('#showImg').attr('src',dataURL);
+        };
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let arr1=[
+        385.65,
+        387.44,
+        378.92,
+        379.02,
+        388.84,
+        389.76,
+        393.30,
+        385.41
+    ]
+    function sum(arr) {
+        console.log('和：',eval(arr.join("+")))
+    }
+    sum(arr1)
+
+    let arr2=[
+        488.57,
+        493.80,
+        200.97,
+        35.48,
+        458.42
+    ]
+    sum(arr2)
+    var ss='不超81.41'
+
+    function buildArr(arr, lim) {
+        arr = [... new Set(arr.filter(item => item <= lim && item > 0).sort((a, b) => a > b))];
+        var result = [];
+        var num = 0;
+        var len = arr.length;
+        each(-1, [], 0);
+        function each(s, a, n) {
+            if(n == lim) {
+                return;
+            }
+            for(var i = s +1; i < len && n < lim; i++) {
+                var A = [... a, arr[i]];
+                var N = n + arr[i];
+                if(N < lim) {
+                    if(N > num) {
+                        result = A;
+                        num = N;
+                    }
+                    each(i, A, N);
+                } else if(N == lim) {
+                    result = A;
+                    num = N;
+                }
+            }
+        }
+
+        console.log(result,eval(result.join("+")))
+        return result;
+    }
+    buildArr([...arr1, ...arr2],3900)
+</script>
+</body>
+</html>

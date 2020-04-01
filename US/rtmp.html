@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>测试rtmp直播源</title>
+    <link href="//vjs.zencdn.net/7.3.0/video-js.min.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/7.3.0/video.min.js"></script>
+</head>
+<body>
+<div class="openFlashTips" style="width:300px;position:absolute;top:20px;left:225px;z-Index:9999;color:white">视频无法正常播放，请点击下方启用flash</div>
+<video id="example_video_5" class="video-js vjs-default-skin videoStyle" controls autoplay preload="auto"  	height="230px" poster="assets/plugins/video5.18.4/m.jpg" data-setup="{}">
+    <source src="rtmp://47.112.220.32:1935/live/7_111.61.115.183" type="rtmp/flv">
+    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+</video>
+<embed width="300" height="70" class="openFlash" style="position:absolute;top:130px;left:225px;z-Index:9999;" type="application/x-shockwave-flash">
+<script type="text/javascript" language="JavaScript">
+    var myPlayer5 = videojs('example_video_5');
+    videojs("example_video_5").ready(
+        function(){
+            var myPlayer5 = this;myPlayer5.play();
+        }
+    );
+    
+    let a=[{name:'tom'},{name:'lili'}]
+    let b=[{name:'tom'},{name:'lili'}]
+    console.log(a ===b)
+    let count=String(343246666)
+    function setCount(num){
+        let count=String(num)
+        let tmp=count.slice(-2)
+        tmp=Number(tmp)
+        console.log(1,tmp)
+        if (tmp>30){
+            return tmp
+        } else{
+            return tmp+50
+        }
+    }
+    console.log(setCount(324284))
+    console.log(count.length)
+    console.log(count.slice(-2))
+</script>
+</body>
+</html>

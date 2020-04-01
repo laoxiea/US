@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+    var str111=`
+
+/***** 上报的维修详情外包样式 *****/
+.wrapper {
+  padding: 0 40rpx;
+  .title {
+    height: 70rpx;
+    font-size: 40rpx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    line-height: 70rpx;
+  }
+  /***** 上报的维修详情列表样式 *****/
+  .detail-list {
+    .detail {
+      display: flex;
+    }
+    .detail-left {
+      width: 140rpx;
+      color: #999999;
+      font-size: 28rpx;
+      height: 60rpx;
+      line-height: 60rpx;
+    }
+    .detail-right {
+      flex: 1;
+      color: #333333;
+      padding-left: 30rpx;
+      font-size: 28rpx;
+      height: 60rpx;
+      line-height: 60rpx;
+      text-align: center;
+    }
+  }
+}
+    `
+
+
+
+
+    function f(str) {
+        let str1=str?str:''
+        return str1.replace(/(\d+)rpx/g, (g, $1) => {
+            return $1 / 2 + 'px'
+        })
+    }
+    console.log(f(str111))
+
+
+</script>
+</body>
+</html>

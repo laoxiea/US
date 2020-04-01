@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+<div id="dd"></div>
+<script>
+    $('#dd').html(`<h1 onclick="test1()">4234234</h1>`)
+    function test() {
+        console.log(123)
+    }
+    function test1() {
+        console.log(234)//可以
+    }
+    $('#dd').append('<button>按钮</button>')
+</script>
+</body>
+</html>
