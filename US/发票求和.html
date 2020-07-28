@@ -6,7 +6,21 @@
 </head>
 <body>
 <script>
-
+    let arrr1=[
+        166.94,396.94,388.91,358.54,229.22,33.75,395.80,31.89,
+        387.44,388.84,389.76,
+        32.55,13,483.99,496.12,490.98,491.96,496.08,190.36,185.08
+    ]
+        // ,173.22,24.66,23.72,142.74,
+        // 23.38,461.00,481.37
+    let arrr=[
+        32.55,13,483.99,496.12,490.98,491.96,496.08,190.36,185.08,173.22,24.66,23.72,142.74,
+        23.38,461.00,481.37
+    ]
+    let arr00=[
+        32.55,13,483.99,496.12,490.98,494.96,496.08,190.36,185.08,173.22,24.66,23.72,142.74,491.96,481.37,461
+    ]
+    // arrr1=Array.from(new Set(arrr1))
     let arr1=[
         385.65,
         387.44,
@@ -15,19 +29,20 @@
         388.84,
         389.76,
         393.30,
-        385.41
-    ]
-    function sum(arr) {
-        console.log('和：',eval(arr.join("+")))
-    }
-    sum(arr1)
-
-    let arr2=[
+        385.41,
         488.57,
         493.80,
         200.97,
         35.48,
-        458.42
+        458.42,
+        299.63
+    ]
+    function sum(arr) {
+        console.log('和：',eval(arr.join("+")))
+    }
+    sum(arrr1)
+
+    let arr2=[
     ]
     sum(arr2)
     var ss='不超81.41'
@@ -58,10 +73,50 @@
             }
         }
 
-        console.log(result,eval(result.join("+")))
+        result.sort()
+        console.log(result,eval(result.join("+")),result.length+'张')
         return result;
     }
-    buildArr([...arr1, ...arr2],3900)
+    buildArr(arrr1,3900)
+    // 385.65, 387.44, 379.02, 388.84, 389.76, 393.3, 385.41, 493.8, 200.97, 35.48, 458.42
+    // 385.65, 378.92, 379.02, 393.3, 385.41, 488.57, 493.8, 200.97, 35.48, 458.42, 299.63
+    /*
+来访登记  /pages/visitRecord/main           visitRecord
+订餐服务  /pages/orderFood/main             orderFood
+来访邀请  /pages/visitInvite/main           visitInvite
+餐厅预订  /pages/restaurant/main            restaurant
+会议管理  /pages/meeting/main               meeting
+班车服务  /pages/bus/main                   bus
+物业报修  /pages/property/main              property
+票券服务  /pages/ticket/main                ticket
+充值缴费  /pages/rechargeCmpay/main         rechargeCmpay
+消防服务  /pages/firWarn/main               firWarn
+洗车服务  /pages/washCar/main               washCar
+    *
+    *
+    * */
+    /*
+    *  山西后勤项目（晋快办）1、首页和个人中心昵称过长导致的样式布局错乱问题修复，最大支持web端的20个字符以内自适应
+    *                     2、会议管理模块的少部分机型显示异常问题修复，内部人员查询接口更换
+    *                     3、体验版切换为测试环境，方便后端测试支付，发布政务云环境的正式版
+    *
+    *  满天星（智慧城管）   浅色主题皮肤修改：
+    *                     1、全局弹框主题颜色样式修改
+    *                     2、告警管理模块树组件简化优化
+    *                     3、视频监控模块识别结果主题样式修改
+    *                     4、首页地图及echarts图表颜色样式修改
+    *
+    *
+    *
+    * */
+/*
+*
+*
+* */
+
+
+
+
 </script>
 </body>
 </html>

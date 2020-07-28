@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            font-size: 20px;
+        }
+        #d1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            border-radius: 70%/70%;
+        }
+    </style>
+</head>
+<body>
+<div>234sdfsdfsdd防守打法</div>
+<div id="d1"></div>
+<script src="../js/jquery.js"></script>
+<script>
+    function resize() {
+        var ratioX = $(window).width() / 1920;
+        var ratioY = $(window).height() / 1080;
+        $("body").css({
+            transform: "scale(" + ratioX + "," + ratioX + ")",
+            transformOrigin: "left top",
+            backgroundSize: "100% 100%"
+        });
+        $("html").css({'overflow':'hidden'})
+    }
+
+    $(window, document).resize(function () {
+        resize();
+    });
+    resize();
+
+</script>
+</body>
+</html>
