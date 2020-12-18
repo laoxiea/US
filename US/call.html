@@ -33,11 +33,11 @@
     fun.call(window)//全局变量
 
     let aa={value:'aa'}
-    fun.call(aa)//aa
-    fun.call(document.getElementById('in'))//call改变this指向
+    fun.call(aa)//aa   fun.apply(aa)
+    fun.call(document.getElementById('in'))//call改变this指向   fun.apply(document.getElementById('in'))
 </script>
 <script>
-    var notRealArr={0:'零',1:'一',2:'二',length:2}
+    var notRealArr={0:'零',1:'一',2:'二',length:4}
     console.log(Array.prototype.slice.call(notRealArr))//必须用slice
 </script>
 <script>
