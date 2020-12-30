@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper{
+            width: 800px;
+            height: 400px;
+            display: grid;
+            grid-template-areas:
+                "header header header header"
+                "main main . side"
+                "footer footer footer footer";
+            grid-gap:20px 30px;
+
+            /*grid-template-columns:[left] 100px [middel] auto [middel] auto [middel] 100px[right];*/
+            /*grid-template-rows:1fr 2fr 1fr;*/
+            /*justify-items: center;*/
+            /*align-items: center;*/
+            place-content:space-evenly;
+        }
+        .a{
+            background: #eee;
+            border: 1px solid red;
+
+        }
+        .section{
+            /*grid-column-start: 2;*/
+            /*grid-column-end: 4;*/
+            /*grid-row-start: 2;*/
+            /*grid-row-end: 4;*/
+            /*grid-column-start: span 2;*/
+            grid-column: span 2 / span 4;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="a"><section>1</section></div>
+    <div class="a"><section>2</section></div>
+    <div class="a"><section>3</section></div>
+    <div class="a"><section>4</section></div>
+    <div class="a"><section>5</section></div>
+    <div class="a section"><section>6</section></div>
+    <div class="a"><section>7</section></div>
+    <div class="a"><section>8</section></div>
+    <div class="a"><section>9</section></div>
+    <div class="a"><section>10</section></div>
+    <div class="a"><section>11</section></div>
+    <div class="a"><section>12</section></div>
+</div>
+<style>
+    .container{
+        width: 800px;
+        height: 400px;
+        display: grid;
+        grid-template-areas:
+            "header header header header"
+            "left main main main"
+            "footer footer footer end ";
+        gap: 10px;
+    }
+    .container>div{
+        background: #aceeeb;
+    }
+    .header{
+        grid-area: header;
+    }
+    .left{
+        grid-area:left
+    }
+    .main{
+        grid-area:main
+    }
+    .footer{
+        grid-area:footer
+    }
+    .end{
+        grid-area: end
+    }
+</style>
+<div class="container">
+    <div class="header"></div>
+    <div class="left"></div>
+    <div class="main"></div>
+    <div class="footer"></div>
+    <div class="end"></div>
+</div>
+</body>
+</html>

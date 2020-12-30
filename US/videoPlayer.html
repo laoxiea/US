@@ -31,14 +31,14 @@
 <script>
     video.volume=1;
     video.playbackRate=1.6;
-    rate.innerHTML=video.playbackRate
+    rate.innerHTML=(video.playbackRate).toFixed(1)
 	jiasu.onclick=function () {
         video.playbackRate+=0.2
-        rate.innerHTML=video.playbackRate
+        rate.innerHTML=(video.playbackRate).toFixed(1)
     }
     jiansu.onclick=function () {
         video.playbackRate-=0.2
-        rate.innerHTML=video.playbackRate
+        rate.innerHTML=(video.playbackRate).toFixed(1)
     }
     document.addEventListener('DOMContentLoaded', function() {
         var fileControl = document.querySelector('#file_input');
