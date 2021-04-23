@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            background: #f7eedd;
+        }
+
+        #canvas {
+            display: block;
+            margin: auto;
+        }
+
+        #canvas1 {
+            width: 500px;
+            height: 500px;
+            /*display: block;*/
+            border: 1px solid #aaa;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+<button onclick="clearB()">clear</button>
+<!--<canvas id="canvas1"></canvas>-->
+<script>
+    let canvasWidth = canvasHeight = 500;
+    let canvas = document.getElementById('canvas')
+    let context = canvas.getContext('2d')
+    let isMouseDown = false
+    let lastLoc = {x: 0, y: 0}
+    context.width = canvasWidth
+    context.height = canvasHeight
+
+    console.log(canvas.getBoundingClientRect())
+    canvas.onmousedown = (e) => {
+        e.preventDefault()
+        // console.log(e.clientX, e.clientY)
+        let loc = windeoToCanvas(e.clientX, e.clientY)
+        lastLoc = {x: loc.x, y: loc.y}
+        // console.log(windeoToCanvas(e.clientX, e.clientY))
+        isMouseDown = true
+    }
+    canvas.onmouseup = (e) => {
+        e.preventDefault()
+        isMouseDown = false
+        console.log(context.isPointInPath(e.clientX,e.clientY))
+    }
+    canvas.onmouseout = (e) => {
+        e.preventDefault()
+        isMouseDown = false
+    }
+    canvas.onmousemove = (e) => {
+        e.preventDefault()
+        if (isMouseDown) {
+            let curLoc = windeoToCanvas(e.clientX, e.clientY)
+
+            context.beginPath();
+            context.lineWidth = 10
+            context.strokeStyle = 'black'
+            context.lineCap = 'round'
+            context.lineJoin = 'round'
+
+            context.moveTo(lastLoc.x, lastLoc.y)
+            context.lineTo(curLoc.x, curLoc.y)
+            context.stroke()
+            lastLoc = curLoc
+        }
+    }
+
+    function windeoToCanvas(x, y) {
+        let bbox = canvas.getBoundingClientRect()
+        return {x: Math.round(x - bbox.left), y: Math.round(y - bbox.top)}
+    }
+
+    drawGrid()
+
+    function drawGrid() {
+        context.save()
+        context.strokeStyle = 'red'
+
+        context.beginPath()
+        context.moveTo(3, 3)
+        context.lineTo(context.width - 3, 3)
+        context.lineTo(context.width - 3, context.height - 3)
+        context.lineTo(3, context.height - 3)
+        context.closePath()
+        context.lineWidth = 6
+        context.stroke()
+
+        context.setLineDash([5, 4]);
+        context.beginPath()
+        context.moveTo(0, 0)
+        context.lineTo(canvasWidth, canvasHeight)
+
+        context.moveTo(canvasWidth, 0)
+        context.lineTo(0, canvasHeight)
+
+        context.moveTo(canvasWidth / 2, 0)
+        context.lineTo(canvasWidth / 2, canvasHeight)
+
+        context.moveTo(0, canvasHeight / 2)
+        context.lineTo(canvasWidth, canvasHeight / 2)
+
+
+        context.lineWidth = 1
+        context.stroke()
+    }
+
+    function clearB() {
+        context.clearRect(0, 0, canvasWidth, canvasHeight)
+        drawGrid()
+    }
+</script>
+</body>
+</html>

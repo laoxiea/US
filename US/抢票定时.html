@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<audio src="../images/起风了.mp3" id="audio"></audio>
+<div id="div">没票呢</div>
+<script src="../js/jquery.js"></script>
+<script>
+    let audio1=document.getElementById('audio')
+    function test(){
+        $.ajax({
+            type: "get",
+            async: true,
+            url: "https://ticketapi.chnmuseum.cn/api/ticket/calendar?p=wx",
+            success: function (data) {
+                console.log(data)
+                if (data.data.yy_date[3].tp[2].tp_last_stock!==0) {
+                    clearInterval(timer)
+                    // alert('有票啦')
+                    audio1.autoplay=true
+                    audio1.play()
+                    // fullScreen()
+                    div.innerHTML='有票了'
+                }
+            }
+        })
+    }
+    let timer=setInterval(()=>{
+        test()
+    },10000)
+//定都峰 鬼笑石 世界公园  古北水镇  北京电视台
+
+    function fullScreen(){
+        var el = document.documentElement;
+        var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+        if(typeof rfs != "undefined" && rfs) {
+            rfs.call(el);
+        }
+    }
+</script>
+</body>
+</html>

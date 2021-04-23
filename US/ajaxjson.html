@@ -19,10 +19,10 @@
 <script>
     $.ajax({
         headers: {
-//            'Content-Type': 'application/json; charset=UTF-8' //有头request payload和Form Data
+           'Content-Type': 'application/json; charset=UTF-8' //有头request payload和Form Data
         },
-        type:'POST',
-        url:'js/test.json',
+        type:'GET',
+        url:'../js/test.json',
         data:{name:'tom'},
         dataType:'json',
         success:function (data) {
