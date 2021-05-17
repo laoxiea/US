@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div{
+            width: 300px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div id="div">
+    Lorem ipsum dolor sit amet 的萨达多d
+</div>
+
+<script>
+    function checkOverflow(el) {
+        let ele=document.getElementById(el)
+        var curOverflow = ele.style.overflow;
+
+        console.log(curOverflow)
+        if ( !curOverflow || curOverflow === "visible" )
+            ele.style.overflow = "hidden";
+
+        var isOverflowing = ele.clientWidth < ele.scrollWidth
+            || ele.clientHeight < ele.scrollHeight;
+
+        ele.style.overflow = curOverflow;
+
+        return isOverflowing;
+    }
+    console.log(checkOverflow('div'))//true  false
+</script>
+</body>
+</html>
