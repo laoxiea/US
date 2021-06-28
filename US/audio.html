@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="playAudio()">播放</button>
+<script>
+    function playAudio(){
+        let au = new Audio('../images/起风了.mp3').play()
+        console.log(au)
+    }
+//不能直接播放，免得打扰，必须手动触发或者等待，移动端也是，权限限制了
+</script>
+</body>
+</html>
