@@ -5,18 +5,24 @@
     <title>Title</title>
     <style>
         #d1{
-            background: #eee;
+            /*background: #eee;*/
             position: absolute;
             width: 100%;
             height: 60%;
             display: flex;
             flex-direction: column;
+
             /*justify-content: space-around;*/
         }
         #d2{
             /*width: 300px;*/
             height: 100px;
-            background: #6cee55;
+            background-image: linear-gradient(
+                    0deg,transparent 24%, rgba(27, 39, 250, 0.98) 25%,hsla(0,8%,80.4%,.05) 26%,transparent 27%,transparent 74%, hsla(57, 83%, 45%, 0.99) 75%,rgba(180,176,176,.05) 76%,transparent 77%,transparent),
+            linear-gradient(
+                    90deg,transparent 24%, rgba(74, 78, 255, 0.95) 25%,hsla(0,4%,66.1%,.05) 26%,transparent 27%,transparent 74%, hsla(358, 62%, 53%, 0.96) 75%,rgba(180,176,176,.05) 76%,transparent 77%,transparent);
+            background-color: #cfeebc;
+            background-size: 50px 50px;
         }
         #d3{
             flex-grow: 1;

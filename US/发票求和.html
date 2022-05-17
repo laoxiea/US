@@ -7,28 +7,39 @@
 <body>
 <script>
 
-    // arrr1=Array.from(new Set(arrr1))
+    // arrr1=Array.from(new Set(arrr1)) 4538
     let arr1=[
-        299.10,
-        299.53,
-        295.88,
-        293.23,
-        19.94,
-        148.05,//去掉这个 换159纸质
-        133.76,//超了
-        292.36,
-        56.44,
-        224.28,
-        261.56,
-        287.47,
-        293.56,
-        292.26,
-        285.81,
-        297.56,
-        265.46,
-        289.38,
-        286.40
+        197.00,
+        177.00,
+        185.00,
+        190.00,
+        190.00,
+        169.00,
+        189.00,
+        157.00,
+        190.00,
+        190.00,
+        180.00,
+        179.00,
+        178.00,
+        176.00,
+        185.00,
+        165.00,
+        164.00,
+        194.00,
+        152.00,
+        172.00,
+        196.00,
+        175.00,
+        183.00,
+        180.00,
+        194.00,
+
+
+
     ]
+    arr1.sort()
+    console.log(arr1)
     function sum(arr) {
         console.log('和：',eval(arr.join("+")),' 张：',arr.length)
     }
@@ -36,7 +47,8 @@
 
 
     function buildArr(arr, lim) {
-        arr = [... new Set(arr.filter(item => item <= lim && item > 0).sort((a, b) => a > b))];
+        // arr = [... new Set(arr.filter(item => item <= lim && item > 0).sort((a, b) => a > b))];
+        arr = [... arr.filter(item => item <= lim && item > 0).sort((a, b) => a > b)];
         var result = [];
         var num = 0;
         var len = arr.length;
@@ -65,7 +77,7 @@
         console.log(result,eval(result.join("+")),result.length+'张')
         return result;
     }
-    buildArr(arr1,4500)
+    // buildArr(arr1,4500)
     // 385.65, 387.44, 379.02, 388.84, 389.76, 393.3, 385.41, 493.8, 200.97, 35.48, 458.42
     // 385.65, 378.92, 379.02, 393.3, 385.41, 488.57, 493.8, 200.97, 35.48, 458.42, 299.63
     /*
@@ -104,7 +116,7 @@
 
 
 
-
+// 代理 去重 map/foreach 布局 居中 flex 定位类型 深拷贝 缓存 const ==和=== 引用类型 组件传值 promise router传值和vuex computed和watch  git  添加和编辑
 </script>
 </body>
 </html>
