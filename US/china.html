@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        #main{
+            width: 60%;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+<script src="../js/jquery.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script type="text/javascript" src="../js/echarts-gl.min.js"></script>
+<script src="../js/china.js"></script>
+<div id="main"></div>
+<script>
+
+    // //创建地图实例对象
+    // var chart = echarts.init(document.getElementById('main'));
+    //
+    // var data = []
+    // var geoCoordMap = {}
+    //
+    // var convertData = function (data) {
+    //     var res = [];
+    //     for (var i = 0; i < data.length; i++) {
+    //         var geoCoord = geoCoordMap[data[i].name];
+    //         if (geoCoord) {
+    //             res.push({
+    //                 name: data[i].name,
+    //                 value: geoCoord.concat(data[i].value)
+    //             });
+    //         }
+    //     }
+    //     return res;
+    // };
+    //
+    // option = {
+    //     backgroundColor: '#404a59',
+    //     title: {
+    //         text: '全国主要城市空气质量',
+    //         subtext: 'data from PM25.in',
+    //         sublink: 'http://www.pm25.in',
+    //         left: 'center',
+    //         textStyle: {
+    //             color: '#fff'
+    //         }
+    //     },
+    //     tooltip : {
+    //         trigger: 'item'
+    //     },
+    //     legend: {
+    //         orient: 'vertical',
+    //         y: 'bottom',
+    //         x:'right',
+    //         data:['pm2.5'],
+    //         textStyle: {
+    //             color: '#fff'
+    //         }
+    //     },
+    //     geo: {
+    //         map: 'china',
+    //         label: {
+    //             emphasis: {
+    //                 show: false,
+    //             }
+    //         },
+    //         roam: true,
+    //         itemStyle: {
+    //             emphasis: {
+    //                 color: ['#67fa7f','#fa7a5e','#4278fa'],
+    //                 borderColor: '#000',
+    //                 // borderWidth:1,
+    //                 shadowOffsetY: 5,
+    //                 shadowOffsetX: 5,
+    //                 // shadowColor: '#467639',
+    //                 // shadowBlur: 1,
+    //                 areaColor: 'rgba(255,255,0, 0.5)',
+    //                 opacity:0.6
+    //             },
+    //         }
+    //     },
+    //     series : [
+    //         {
+    //             name: 'pm2.5',
+    //             type: 'scatter',
+    //             coordinateSystem: 'geo',
+    //             data: convertData(data),
+    //             symbolSize: function (val) {
+    //                 return val[2] / 10;
+    //             },
+    //             label: {
+    //                 normal: {
+    //                     formatter: '{b}',
+    //                     position: 'right',
+    //                     show: false
+    //                 },
+    //                 emphasis: {
+    //                     show: true
+    //                 }
+    //             },
+    //             itemStyle: {
+    //                 normal: {
+    //                     color: '#ddb926'
+    //                 }
+    //             }
+    //         },
+    //         {
+    //             name: 'Top 5',
+    //             type: 'effectScatter',
+    //             coordinateSystem: 'geo',
+    //             data: convertData(data.sort(function (a, b) {
+    //                 return b.value - a.value;
+    //             }).slice(0, 6)),
+    //             symbolSize: function (val) {
+    //                 return val[2] / 10;
+    //             },
+    //             showEffectOn: 'render',
+    //             rippleEffect: {
+    //                 brushType: 'stroke'
+    //             },
+    //             hoverAnimation: true,
+    //             label: {
+    //                 normal: {
+    //                     formatter: '{b}',
+    //                     position: 'right',
+    //                     show: true
+    //                 }
+    //             },
+    //             itemStyle: {
+    //                 emphasis: {
+    //                     color: ['#67fa7f','#fa7a5e','#4278fa'],
+    //                     //borderColor: '#000',
+    //                     // shadowOffsetY: 2,
+    //                     shadowOffsetX: 15,
+    //                     // shadowColor: 'rgba(0, 0, 0, 1)',
+    //                     // shadowBlur: 20,
+    //                     areaColor: 'rgba(255,255,0, 0.5)',
+    //                 },
+    //
+    //             },
+    //             zlevel: 1
+    //         }
+    //     ]
+    // };
+    //
+    //
+    //
+    // chart.setOption(option);
+
+
+    function drawChina() {
+        // 初始化echarts实例
+        var myEcharts = echarts.init(document.getElementById("main"));
+        // document.getElementById("main").style.width = 900 + "px";
+        // document.getElementById("main").style.height = 800 + "px";
+        // document.getElementById("main").style.zIndex = '1111';
+        myEcharts.resize(); // 直接加这句即可
+        var option = {
+            geo3D: {
+                map: 'china',
+                roam: true,
+                itemStyle: {
+                    color: 'rgb(5,101,123)',
+                    opacity: 1,
+                    borderWidth: 0.8,
+                    borderColor: 'rgb(62,215,213)'
+                },
+                label: {
+                    show: true,
+                    textStyle: {
+                        color: '#fff', //地图初始化区域字体颜色
+                        fontSize: 16,
+                        opacity: 1,
+                        backgroundColor: 'rgba(0,0,0,0)'
+                        //backgroundColor: 'rgba(53,171,199,0)'
+                    },
+                },
+                emphasis: { //当鼠标放上去  地区区域是否显示名称
+                    label: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 16,
+                            backgroundColor: 'rgba(0,23,11,0)'
+                        }
+                    }
+                },
+                //shading: 'lambert',
+                light: { //光照阴影
+                    main: {
+                        color: '#fff', //光照颜色
+                        intensity: 1.2, //光照强度
+                        //shadowQuality: 'high', //阴影亮度
+                        shadow: false, //是否显示阴影
+                        alpha: 55,
+                        beta: 10
+
+                    },
+                    ambient: {
+                        intensity: 0.3
+                    }
+                },
+                realisticMaterial: {
+                    detailTexture: 'asset/leather/leather_albedo.jpg'
+                }
+            },
+            title: {  //标题样式
+                text: '',
+                x: "center",
+                textStyle: {
+                    fontSize: 18,
+                    color: "red"
+                },
+            },
+            tooltip: {  //这里设置提示框
+                // trigger: 'item',  //数据项图形触发
+                // backgroundColor: "red",  //提示框浮层的背景颜色。
+                // //字符串模板(地图): {a}（系列名称），{b}（区域名称），{c}（合并数值）,{d}（无）
+                // formatter: '地区：{b}<br/>模拟数据：{c}'
+                show: true,
+                // formatter:(params)=>{
+                //   let data = "测试1:"+params.name + "<br/>"+"值:"+ params.value[2]+"<br/>"+"地理坐标:[" + params.value[0]+","+params.value[1] +"]";
+                //   return data;
+                // },
+            },
+            visualMap: [{
+                type: 'continuous',
+                seriesIndex: 0,
+                text: ['bar3D'],
+                calculable: true,
+                max: 300,
+                inRange: {
+                    color: ['#87aa66', '#eba438', '#d94d4c']
+                }
+            }, {
+                type: 'continuous',
+                seriesIndex: 1,
+                text: ['scatter3D'],
+                left: 'right',
+                max: 100,
+                calculable: true,
+                inRange: {
+                    color: ['#000', 'blue', 'purple']
+                }
+            }],
+            legend: {},
+            series: [
+                {
+                    type: 'lines3D',
+                    coordinateSystem: 'geo3D',
+                    effect: {
+                        show: true,
+                        trailWidth: 4,
+                        trailOpacity: 0.5,
+                        trailLength: 0.3,
+                        constantSpeed: 5
+                    },
+
+                    blendMode: 'lighter',
+
+                    lineStyle: {
+                        width: 0.2,
+                        opacity: 0.05
+                    },
+
+                    data: [
+                        [
+                            [121.15, 31.89],
+                            [109.781327, 39.608266]
+                        ],
+                        [
+                            [120.38, 37.35],
+                            [122.207216, 29.985295]
+                        ],
+                        [
+                            [123.97, 47.33],
+                            [120.13, 33.38]
+                        ],
+                        [
+                            [118.87, 42.28],
+                            [120.33, 36.07]
+                        ],
+                        [
+                            [121.52, 36.89],
+                            [117.93, 40.97]
+                        ],
+                        [
+                            [102.188043, 38.520089],
+                            [122.1, 37.5]
+                        ],
+                        [
+                            [118.58, 24.93],
+                            [101.718637, 26.582347]
+                        ],
+                        [
+                            [120.53, 36.86],
+                            [121.48, 31.22]
+                        ],
+                        [
+                            [119.46, 35.42],
+                            [122.05, 37.2]
+                        ],
+                        [
+                            [119.97, 35.88],
+                            [116.1, 24.55]
+                        ],
+                        [
+                            [121.05, 32.08],
+                            [112.02, 22.93]
+                        ],
+                        [
+                            [91.11, 29.97],
+                            [118.1, 24.46]
+                        ]
+                    ],
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myEcharts.setOption(option);
+        window.addEventListener('resize', () => {
+            myEcharts.resize()
+        })
+    }
+
+    drawChina()
+
+</script>
+</body>
+</html>

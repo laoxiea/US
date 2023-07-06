@@ -4,20 +4,40 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<script src="../js/jquery.min.js"></script>
+
 <body>
 <script>
     async function aa(){
         try {
-            await console.log(sdfd)
+            await console.log('sdfd')
         }catch (e) {
             console.log(e)
         }
         setTimeout(async ()=>{
-            await console.log(ewewe)
-        })
+            await console.log('ewewe')
+        },1000)
          await console.log(123)
     }
     aa()
+
+    function request(){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve('done')
+            },2000)
+        })
+    }
+
+    async function ajax() {
+        let res=await request()
+        console.log(res)
+        if (res ==='done'){
+            console.log('ajax again')
+        }
+        console.log(5656)
+    }
+    ajax()
 </script>
 </body>
 </html>

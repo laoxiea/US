@@ -7,8 +7,9 @@
 <body>
 <div>这是一个div需要\n换行吗'\n'不行</div>
 <script>
-    console.log('<h1>标题</h1>')
-//    document.write('<h1>标题</h1>')
+    console.log('<h1>标\n题</h1>')
+    console.log('%c标题','color:red;font-size:33px;background:pink')
+   document.write('<h1>标题</h1>')
     document.write('<script src="../js/jquery.js"><\/script>')
 
 </script>
@@ -22,7 +23,7 @@
         }else{
             document.title = '小花的个人空间'
         }
-    },1000)
+    },2000)
 </script>
 </body>
 </html>

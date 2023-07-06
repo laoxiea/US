@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            height: 200%;
+        }
+
+        #box {
+            position: absolute;
+            inset: 100px 21% 10px 20px;
+            background: #eeb464;
+            opacity: 0.8;
+        }
+        .grandfather{
+            background: #333;
+            height: 60%;
+        }
+
+        .parent {
+            width: 80%;
+            height: 100%;
+            background: #62d8ee;
+        }
+
+        .sticky {
+            background: #ee99cb;
+            position: sticky;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+<ruby>
+    汉字
+    <rt>hànzì</rt>
+</ruby>
+照顾家人，想过自己的生活，让自己的孩子有更多的机会
+<div id="box">
+    囧
+</div>
+<div class="grandfather">
+    <div class="parent">
+        <div class=sticky>sticky</div>
+    </div>
+</div>
+<script>
+    class Product {
+        constructor(name, price) {
+            this.name = name
+            this.price = price
+        }
+
+        get des() {
+            return '详情：' + this.name
+        }
+    }
+
+    Object.defineProperty(Product.prototype, 'total', {
+        get() {
+            return this.name + ' ' + this.price + '元'
+        }
+    })
+
+    const a = new Product('egg', 33)
+    console.log(a.total)
+    console.log(a.des)
+</script>
+</body>
+</html>

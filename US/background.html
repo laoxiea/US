@@ -4,15 +4,56 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .bg{
+        :root {
+            --width: 63px;
+        }
+
+        .bg {
             width: 200px;
             height: 50px;
             border: 1px solid pink;
-            background:url("../images/nav_hover@2x.png") no-repeat center 150%;
+            background: url("../images/nav_hover@2x.png") no-repeat center 150%;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: ani 2s infinite;
+        }
+
+        @keyframes ani {
+            0% {
+                left: 0;
+            }
+            100% {
+                top: 50%;
+                left: calc(100% - var(--width));
+            }
         }
     </style>
 </head>
 <body>
 <div class="bg"></div>
+<span>---------</span>
+<script>
+    let a = 4
+
+    function f(a) {
+        switch (a) {
+            case 1:
+                console.log(1)
+                return;
+            case 2:
+            case 3:
+            case 4:
+                console.log(3)
+                return;
+            default:
+                console.log(999)
+        }
+    }
+    f(a)
+</script>
 </body>
 </html>

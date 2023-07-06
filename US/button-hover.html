@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .markdown-body{
+        html {
+            /*color-scheme:dark*/
+        }
+
+        .markdown-body {
             position: relative;
             padding: 10px;
             text-align: center;
         }
+
         .markdown-body a:after {
             content: "";
             position: absolute;
@@ -21,9 +26,80 @@
             transform-origin: bottom center;
             transition: transform .5s ease-in-out;
         }
+
         .markdown-body a:hover:after {
             transform: scaleX(1);
             transform-origin: bottom left;
+        }
+
+        .s-box{
+            transform-style: preserve-3d;
+            transform-origin: center;
+            background: #ee9dbd;
+            padding: 20px;
+            width: 30%;
+            transition: all 3s;
+        }
+        .content {
+            background: #acacac;
+            width: fit-content;
+            /*transition: all 1s;*/
+            transform: translateZ(30px);
+        }
+
+        .s-box:hover {
+            transform: rotateY(0.3turn);
+            /*rotate3d(0.5, 0.5, 1,20deg);*/
+
+        }
+
+        input {
+            accent-color: #8fcbbf
+        }
+
+        .box {
+            overflow: hidden;
+            background: #eee;
+            width: 240px;
+        }
+
+        .text {
+            white-space: nowrap;
+            animation: textScroll 3s linear infinite;
+        }
+
+        @keyframes textScroll {
+            0% {
+                transform: translateX(260px);
+            }
+            100% {
+                transform: translateX(-260px);
+            }
+        }
+
+        #animate {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background: #eee;
+        }
+
+        .anima {
+            position: absolute;
+            left: 40px;
+            animation: scroll 3s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                left: 0;
+            }
+            50% {
+                left: 100%;
+            }
+            100% {
+                left: 0;
+            }
         }
     </style>
 </head>
@@ -31,13 +107,40 @@
 <div class="markdown-body">
     <a href="http://www.baidu.com">打的健康拉三等奖</a>
 </div>
+<div class="s-box">
+    <div class="content">664324666</div>
+</div>
+<input type="checkbox" value="阿牛">
+<input type="radio" value="阿牛">
+<input type="range" value="阿牛">
+<progress>1</progress>
+<div class="box">
+    <div class="text">跑马灯效果跑马灯效果跑马灯效果</div>
+</div>
+
+<div id="animate">
+    <div class="anima">动画动画动画动画</div>
+</div>
 <script>
-    let a=true,b=2
-    if (b>(a?1:3)) {
+    let a = true, b = 2
+    if (b > (a ? 1 : 3)) {
         console.log(1)
-    }else{
+    } else {
         console.log(2)
     }
+    const ob = new IntersectionObserver((entries) => {
+        console.log(entries)
+
+        for (const entry of entries) {
+            if (entry.isIntersecting) {
+                console.log(entry)
+            }
+        }
+    }, {
+        root: null,
+        rootMargin: '1%',
+        threshold: 0.1
+    })
 </script>
 </body>
 </html>

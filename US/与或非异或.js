@@ -9,6 +9,13 @@ console.log('a>>b',a>>b)//0  00000000
 
 c=-3
 console.log(c.toString(2))//-11
+
+let num=9
+num1=num.toString(2)
+console.log(num1)
+console.log((num>>1).toString(2))
+console.log((0b100).toString(10))//4     2的2次
+console.log((0x100).toString(10))//256   16的2次
 /*
 1、数字身份 25
 1前期参与了PC管理端的开发，完成了登录、初始化等的模块。
