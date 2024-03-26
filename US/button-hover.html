@@ -8,6 +8,7 @@
             /*color-scheme:dark*/
         }
 
+
         .markdown-body {
             position: relative;
             padding: 10px;
@@ -60,12 +61,18 @@
 
         .box {
             overflow: hidden;
-            width: 240px;
-            height: 100px;
-            background: conic-gradient(#fff 0.25turn, #000 0.25turn 0.5turn, #fff 0.5turn 0.75turn, #000 0.75turn) top left / 25% 25% repeat;
+            border:15px solid;
+            border-image: linear-gradient(red,blue) ;
+            border-image-slice:10 20 1 30;
+            border-image-repeat:round;
+            width: 440px;
+            height: 160px;
+            /*background: conic-gradient(#a5b2ff 90deg, #0000 0.25turn 0.5turn, #ff7fb8 0.5turn 0.75turn, #0000 0.75turn) top left / 25% 25% ;*/
+            -webkit-mask: conic-gradient(#a5b2ff 90deg, #0000 0.25turn 0.5turn, #ff7fb8 0.5turn 0.75turn, #0000 0.75turn) top left / 25% 25% ;
         }
 
         .text {
+            font-size: 22px;
             white-space: nowrap;
             animation: textScroll 3s cubic-bezier(0, 1.2, 1, 1) infinite;
         }
@@ -113,6 +120,55 @@
         [class*=t]{
             text-shadow:2px 2px 2px #23a0c5,-2px -2px 2px #75ff81;
         }
+
+
+        :root{
+            --start-color1:red;
+            --end-color1:black;
+        }
+
+        @keyframes huechange {
+            to {--color-hue:360}
+        }
+
+        @property --color-pos{
+            syntax:'<length>|<length-percentage>|<percentage>';
+            inherits:false;
+            initial-value:90%;
+        }
+
+        @property --color-hue{
+            syntax:'<integer>';
+            inherits:false;
+            initial-value:0;
+        }
+
+        @property --start-color{
+            syntax:'<color>';
+            inherits:false;
+            initial-value:orange;
+        }
+
+        @property --end-color{
+            syntax:'<color>';
+            inherits:false;
+            initial-value:black;
+        }
+
+        .child{
+            display:flex;
+            height:300px;
+            flex:1;
+            margin-right:10px;
+            transition: --start-color 1s, --start-color1 1s, --color-pos 1s, --color-b 1s;
+        }
+
+
+        .child .rainbow{
+            flex:1;
+            background-color: hsl(var(--color-hue), 80%, 50%);
+            animation:huechange 2s calc(var(--index, 0) * -0.2s) infinite linear;
+        }
     </style>
 </head>
 <body>
@@ -133,6 +189,16 @@
 <div id="animate">
     <div class="anima">动画动画动画动画</div>
 </div>
+
+<section class="child">
+    <div class="rainbow" style="--index:0;"></div>
+    <div class="rainbow" style="--index:1;"></div>
+    <div class="rainbow" style="--index:2;"></div>
+    <div class="rainbow" style="--index:3;"></div>
+    <div class="rainbow" style="--index:4;"></div>
+    <div class="rainbow" style="--index:5;"></div>
+    <div class="rainbow" style="--index:6;"></div>
+</section>
 <script>
     let a = true, b = 2
     if (b > (a ? 1 : 3)) {
@@ -144,6 +210,7 @@
         console.log(entries)
 
         for (const entry of entries) {
+            console.log(entry)
             if (entry.isIntersecting) {
                 console.log(entry)
             }
@@ -153,6 +220,7 @@
         rootMargin: '1%',
         threshold: 0.1
     })
+    ob.observe(document.getElementsByClassName('s-box')[0])
 </script>
 </body>
 </html>

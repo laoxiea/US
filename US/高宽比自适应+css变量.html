@@ -35,17 +35,22 @@
             --bgcolor:#62ebee;
             width: 50%;
             margin: auto;
-            aspect-ratio:3;
+            aspect-ratio:16/9;
             background: var(--bgcolor);
             overflow: hidden;
         }
         .content:hover{
             --bgcolor: #55d663
         }
+        .var{
+            position: absolute;
+            inset:var(--l);
+            background: #666;
+        }
     </style>
 </head>
 <body>
-<div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, nobis, optio.
+<div contentEditable class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, nobis, optio.
     Beatae cum dolores dolorum fuga fugit illum, iusto maiores maxime necessitatibus nisi, nulla quod,
     soluta tempore veritatis voluptas voluptatum!
     <div class="content">
@@ -65,6 +70,65 @@
     3557 1950 1525
     3636 2200 2424
      79   250  899   1228
+    <div class="var" style="--l:200px">js控制css变量</div>
 </div>
 </body>
+<script>
+    const l=document.getElementsByClassName('var')[0]
+
+    let count=10,flag=1
+    setInterval(()=>{
+        count+=flag
+        if (count>=100){
+            flag=-2
+        } else if (count<=10) {
+            flag=1
+        }
+
+        // console.log(count)
+        l.style.setProperty('--l',count+'px')
+
+    },40)
+
+    // let num=10
+    // let increase = ()=>num++
+    // let decrease = ()=>num--
+    // let calc=increase
+    // setInterval(()=>{
+    //     calc()
+    //     if (num>=100){
+    //         calc=decrease
+    //     } else if (num<=10) {
+    //         calc=increase
+    //     }
+    //     console.log(num)
+    //     l.style.setProperty('--l',num+'px')
+    // },20)
+
+
+
+
+
+    // function doIt() {
+    //     let a = 10;
+    //     const increase = () => a++;
+    //     const decrease = () => a--;
+    //     let calc = increase;
+    //
+    //     setInterval(() => {
+    //         calc();
+    //         if (a >= 100) {
+    //             calc = decrease;
+    //         } else if (a <= 10) {
+    //             calc = increase;
+    //         }
+    //
+    //         console.log(a);
+    //
+    //         // 测试时为了不让它死循环，加了一个控制
+    //
+    //     }, 20);
+    // }
+    // doIt()
+</script>
 </html>
